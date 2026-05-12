@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,46 +6,55 @@
 
 :root {
     --main-color: #1db954;
+    --sec-color: #ccc;
 }
 
-.custom-navbar{
+.custom-navbar {
     background: black;
 }
 
-.custom-navbar .navbar-brand{
+.custom-navbar .navbar-brand {
     color: var(--main-color);
     font-size: 28px;
     font-weight: bold;
 }
 
-.navbar-nav .nav-item .nav-link{
-    color: #ccc;
+.custom-navbar .navbar-brand:hover {
+    color: var(--main-color);
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: var(--sec-color);
     transition: 0.3s;
 }
 
-.navbar-nav .nav-item .nav-link:hover{
-    color:var(--main-color);
+.navbar-nav .nav-item .nav-link:hover {
+    color: var(--main-color);
 }
 
 .home-banner {
-    height: 90vh;
-    background: url("../assets/homebanner-img.jfif");
-    opacity: 0.95;
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.272)), url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f');
     background-size: cover;
     background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;  
+    text-align: center;
 }
 
-.home-banner h1{
+.home-banner h1 {
     font-size: 65px;
     font-weight: bold;
-}
+}   
 
 .home-banner p {
     font-size: 20px;
-    font-weight: 700;
+    color: var(--sec-color);
+}
+
+.btn-success{
+    background: var(--main-color);
+    border: none;
 }
