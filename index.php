@@ -77,6 +77,24 @@ include("./includes/config.php")
     </nav>
 
 
+
+
+    <section class="home-banner">
+
+    <div>
+        <h1>Unlimited Music & Videos</h1>
+    </div>
+
+    <p>Latest Songs & Entertainment Anytime</p>
+
+
+    <button class="btn btn-success btn-lg mt-3 px-5">
+        Explore Now
+    </button>
+
+    </section>
+
+
 </body>
 
 <!-- Bootstrap 5 JS CDN -->
