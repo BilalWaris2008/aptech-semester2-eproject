@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #1db954;
+}
+
+.custom-navbar{
+    background: black;
+}
+
+.custom-navbar .navbar-brand{
+    color: var(--main-color);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link{
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-item .nav-link:hover{
+    color:var(--main-color);
+}
