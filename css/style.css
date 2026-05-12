@@ -26,3 +26,26 @@
 .navbar-nav .nav-item .nav-link:hover{
     color:var(--main-color);
 }
+
+.home-banner {
+    height: 90vh;
+    background: url("../assets/homebanner-img.jfif");
+    opacity: 0.95;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+}
+
+.home-banner h1{
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.home-banner p {
+    font-size: 20px;
+    font-weight: 700;
+}
