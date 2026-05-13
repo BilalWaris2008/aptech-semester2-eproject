@@ -33,7 +33,6 @@ include("./includes/config.php")
                 data-bs-toggle="collapse"
                 data-bs-target="#menu">
                 <span class="navbar-toggler-icon"></span>
-
             </button>
 
             <div class="collapse navbar-collapse" id="menu">
@@ -43,19 +42,15 @@ include("./includes/config.php")
                     <li class="nav-item">
                         <a href="#" class="nav-link">Home</a>
                     </li>
-
                     <li class="nav-item">
                         <a href="#" class="nav-link">Music</a>
                     </li>
-
                     <li class="nav-item">
                         <a href="#" class="nav-link">Videos</a>
                     </li>
-
                     <li class="nav-item">
                         <a href="#" class="nav-link">Artists</a>
                     </li>
-
                     <li class="nav-item">
                         <a href="#" class="nav-link">Albums</a>
                     </li>
@@ -63,11 +58,9 @@ include("./includes/config.php")
                 </ul>
 
                 <div>
-
                     <a href="#" class="btn btn-outline-light">
                         Login
                     </a>
-
                     <a href="#" class="btn btn-success">
                         Register
                     </a>
@@ -81,16 +74,63 @@ include("./includes/config.php")
 
     <section class="home-banner">
 
-    <div>
-        <h1>Unlimited Music & Videos</h1>
-    </div>
+        <div>
+            <h1>Unlimited Music & Videos</h1>
+        </div>
 
-    <p>Latest Songs & Entertainment Anytime</p>
+        <p>Latest Songs & Entertainment Anytime</p>
+
+        <button class="btn btn-success btn-lg mt-3 px-5">
+            Explore Now
+        </button>
+
+    </section>
 
 
-    <button class="btn btn-success btn-lg mt-3 px-5">
-        Explore Now
-    </button>
+
+
+    <section class="latest-music">
+
+        <div class="music-container">
+
+            <div class="music-title">
+                <h2>Latest Music</h2>
+                <p> Discover newly added songs and trending music</p>
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-2">
+
+                    <div class="music-card">
+
+                        <div class="music-img">
+                            <img src="./assets/latestsong1.avif" alt="Song">
+                            <span class="new-badge">
+                                NEW
+                            </span>
+                        </div>
+
+                        <div class="music-content">
+
+                            <h4>Night Changes</h4>
+                            <p>One Direction</p>
+
+                            <button class="play-btn">
+                                <i class="bi bi-play-fill"></i>
+                                Play Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </section>
 
