@@ -101,12 +101,14 @@ include("./includes/config.php")
 
             <div class="row g-4">
 
-                <div class="col-lg-3 col-md-2">
+                <!-- music 1 -->
+
+                <div class="col-lg-3 col-md-6">
 
                     <div class="music-card">
 
                         <div class="music-img">
-                            <img src="./assets/latestsong1.avif" alt="Song">
+                            <img src="./assets/latestmusic1.avif" alt="Song">
                             <span class="new-badge">
                                 NEW
                             </span>
@@ -116,6 +118,93 @@ include("./includes/config.php")
 
                             <h4>Night Changes</h4>
                             <p>One Direction</p>
+
+                            <button class="play-btn">
+                                <i class="bi bi-play-fill"></i>
+                                Play Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- music 2 -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="music-card">
+
+                        <div class="music-img">
+                            <img src="./assets/latestmusic1.avif" alt="Song">
+                            <span class="new-badge">
+                                NEW
+                            </span>
+                        </div>
+
+                        <div class="music-content">
+
+                            <h4>Blinding Lights</h4>
+                            <p>The Weeknd</p>
+
+                            <button class="play-btn">
+                                <i class="bi bi-play-fill"></i>
+                                Play Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- music 3 -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="music-card">
+
+                        <div class="music-img">
+                            <img src="./assets/latestmusic1.avif" alt="Song">
+                            <span class="new-badge">
+                                NEW
+                            </span>
+                        </div>
+
+                        <div class="music-content">
+
+                            <h4>Perfect</h4>
+                            <p>Ed Sheeran</p>
+
+                            <button class="play-btn">
+                                <i class="bi bi-play-fill"></i>
+                                Play Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- music 4 -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="music-card">
+
+                        <div class="music-img">
+                            <img src="./assets/latestmusic1.avif" alt="Song">
+                            <span class="new-badge">
+                                NEW
+                            </span>
+                        </div>
+
+                        <div class="music-content">
+
+                            <h4>Closer</h4>
+                            <p>The Chainsmokers</p>
 
                             <button class="play-btn">
                                 <i class="bi bi-play-fill"></i>
