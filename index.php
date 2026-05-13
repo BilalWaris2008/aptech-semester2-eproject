@@ -137,7 +137,7 @@ include("./includes/config.php")
                     <div class="music-card">
 
                         <div class="music-img">
-                            <img src="./assets/latestmusic1.avif" alt="Song">
+                            <img src="./assets/latestmusic2.avif" alt="Song">
                             <span class="new-badge">
                                 NEW
                             </span>
@@ -166,7 +166,7 @@ include("./includes/config.php")
                     <div class="music-card">
 
                         <div class="music-img">
-                            <img src="./assets/latestmusic1.avif" alt="Song">
+                            <img src="./assets/latestmusic3.avif" alt="Song">
                             <span class="new-badge">
                                 NEW
                             </span>
@@ -195,7 +195,7 @@ include("./includes/config.php")
                     <div class="music-card">
 
                         <div class="music-img">
-                            <img src="./assets/latestmusic1.avif" alt="Song">
+                            <img src="./assets/homebanner-img.jfif" alt="Song">
                             <span class="new-badge">
                                 NEW
                             </span>
