@@ -7,6 +7,10 @@
 :root {
     --main-color: #1db954;
     --sec-color: #ccc;
+    --text-color: #ffffff;
+    --sec-text-color: #aaaaaa;
+    --bg-color: #111111;
+    --btn-hover-color: #18a349;
 }
 
 .custom-navbar {
@@ -32,9 +36,15 @@
     color: var(--main-color);
 }
 
+.register-btn:hover,
+.play-btn:hover,
+.explore-btn:hover {
+    background-color: var(--btn-hover-color);
+}
+
 .home-banner {
     height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.272)), url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f');
+    background: linear-gradient(rgba(0, 0, 0, 0.272)), url('../assets/homebanner-img.jfif');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -47,14 +57,92 @@
 .home-banner h1 {
     font-size: 65px;
     font-weight: bold;
-}   
+}
 
 .home-banner p {
     font-size: 20px;
     color: var(--sec-color);
 }
 
-.btn-success{
+.btn-success {
     background: var(--main-color);
     border: none;
+}
+
+.latest-music {
+    padding: 100px 0;
+    background-color: var(--bg-color);
+}
+
+.music-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.music-title h2 {
+    color: var(--text-color);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.music-title p {
+    color: var(--sec-text-color);
+    margin-top: 10px;
+}
+
+.music-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.music-card:hover {
+    transform: translateY(-8px);
+}
+
+.music-img {
+    position: relative;
+}
+
+.music-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.new-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.music-content {
+    padding: 20px;
+}
+
+.music-content h4 {
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.music-content p {
+    color: var(--sec-color);
+    margin-bottom: 20px;
+}
+
+.play-btn {
+    width: 100%;
+    border: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
 }
