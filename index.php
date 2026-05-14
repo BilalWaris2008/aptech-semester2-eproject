@@ -18,12 +18,15 @@ include("./includes/config.php")
     <!-- Bootstrap Icon CDN  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
 
+    <!-- CSS Link -->
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
 <body>
 
+
+    <!-- Navbar Start -->
 
     <nav class="navbar navbar-expand-lg navbar-dark py-3 custom-navbar">
         <section class="container">
@@ -73,6 +76,7 @@ include("./includes/config.php")
     </nav>
 
 
+    <!-- Banner -->
 
     <section class="home-banner">
 
@@ -89,6 +93,7 @@ include("./includes/config.php")
     </section>
 
 
+    <!-- Latest Music -->
 
     <section class="latest-music">
 
@@ -191,7 +196,7 @@ include("./includes/config.php")
 
                 <!-- music 4 -->
 
-                 <section class="col">
+                <section class="col">
 
                     <section class="music-card">
 
@@ -254,6 +259,8 @@ include("./includes/config.php")
 
     </section>
 
+
+    
 
 </body>
 
