@@ -61,10 +61,10 @@ include("./includes/config.php")
                 </ul>
 
                 <section>
-                    <a href="#" class="btn btn-outline-light">
+                    <a href="./auth/login.php" class="btn btn-outline-light">
                         Login
                     </a>
-                    <a href="#" class="btn btn-success register-btn">
+                    <a href="./auth/register.php" class="btn btn-success register-btn">
                         Register
                     </a>
                 </section>
@@ -100,11 +100,11 @@ include("./includes/config.php")
             </section>
 
 
-            <section class="row g-4">
+            <section class="row row-cols-1 row-cols-md-3 row-cols-sm-2 row-cols-lg-5 g-4">
 
                 <!-- music 1 -->
 
-                <section class="col-lg-4 col-md-6 col-sm-12">
+                <section class="col">
 
                     <section class="music-card">
 
@@ -117,7 +117,7 @@ include("./includes/config.php")
 
                         <section class="music-content">
 
-                            <h4>Night Changes</h4>
+                            <h5>Night Changes</h5>
                             <p>One Direction</p>
 
                             <button class="play-btn">
@@ -133,7 +133,7 @@ include("./includes/config.php")
 
                 <!-- music 2 -->
 
-                <section class="col-lg-4 col-md-6 col-sm-12">
+                <section class="col">
 
                     <section class="music-card">
 
@@ -146,7 +146,7 @@ include("./includes/config.php")
 
                         <section class="music-content">
 
-                            <h4>Blinding Lights</h4>
+                            <h5>Blinding Lights</h5>
                             <p>The Weeknd</p>
 
                             <button class="play-btn">
@@ -162,7 +162,7 @@ include("./includes/config.php")
 
                 <!-- music 3 -->
 
-                <section class="col-lg-4 col-md-6 col-sm-12">
+                <section class="col">
 
                     <section class="music-card">
 
@@ -175,7 +175,7 @@ include("./includes/config.php")
 
                         <section class="music-content">
 
-                            <h4>Perfect</h4>
+                            <h5>Perfect</h5>
                             <p>Ed Sheeran</p>
 
                             <button class="play-btn">
@@ -191,7 +191,7 @@ include("./includes/config.php")
 
                 <!-- music 4 -->
 
-                 <section class="col-lg-4 col-md-6 col-sm-12">
+                 <section class="col">
 
                     <section class="music-card">
 
@@ -204,7 +204,7 @@ include("./includes/config.php")
 
                         <section class="music-content">
 
-                            <h4>Shape Of You</h4>
+                            <h5>Shape Of You</h5>
                             <p>Ed Sheeran</p>
 
                             <button class="play-btn">
@@ -221,7 +221,7 @@ include("./includes/config.php")
 
                 <!-- music 5 -->
 
-                <section class="col-lg-4 col-md-6 col-sm-12">
+                <section class="col">
 
                     <section class="music-card">
 
@@ -234,7 +234,7 @@ include("./includes/config.php")
 
                         <section class="music-content">
 
-                            <h4>Closer</h4>
+                            <h5>Closer</h5>
                             <p>The Chainsmokers</p>
 
                             <button class="play-btn">
