@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--main-font-family);
 }
 
 ::selection {
@@ -19,10 +19,10 @@
     --sec-text-color: #aaaaaa;
     --bg-color: #111111;
     --btn-hover-color: #18a349;
-    --main-font-family: "Roboto";
-    --sec-font-famiy: "Poppins";
+    --main-font-family: "Poppins";
 }
 
+/* Navbar */
 .custom-navbar {
     background: black;
 }
@@ -30,8 +30,7 @@
 .custom-navbar .navbar-brand {
     color: var(--main-color);
     font-size: 28px;
-    font-family: var(--main-font-family);
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .custom-navbar .navbar-brand:hover {
@@ -41,13 +40,12 @@
 .navbar-nav .nav-item .nav-link {
     color: var(--sec-color);
     font-weight: 600;
-    font-family: var(--main-font-family);
     transition: 0.3s;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
     color: var(--text-color);
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 
 .register-btn:hover,
@@ -56,9 +54,10 @@
     background-color: var(--btn-hover-color);
 }
 
+/* Banner */
 .home-banner {
     height: 70vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.144)), url('../assets/homebanner-img.jfif');
+    background: linear-gradient(rgba(0, 0, 0, 0.203)), url('../assets/homebanner-img.jfif');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -71,8 +70,7 @@
 .home-banner h1 {
     color: var(--text-color);
     font-size: 65px;
-    font-family: var(--sec-font-famiy);
-    font-weight: 600;
+    font-weight: 650;
     text-shadow: 0 0 2px white;
 }
 
@@ -87,6 +85,7 @@
     border: none;
 }
 
+/* Latest Music */
 .latest-music {
     padding: 100px 20px;
     background-color: var(--bg-color);
@@ -142,7 +141,7 @@
 }
 
 .music-content {
-    padding: 20px;
+    padding: 15px;
 }
 
 .music-content h5 {
@@ -167,6 +166,19 @@
     transition: 0.3s;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
 @media screen and (max-width: 792px) {
 
     .home-banner h1 {
