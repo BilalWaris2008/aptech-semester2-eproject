@@ -43,8 +43,8 @@
 }
 
 .home-banner {
-    height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.272)), url('../assets/homebanner-img.jfif');
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.144)), url('../assets/homebanner-img.jfif');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -55,13 +55,15 @@
 }
 
 .home-banner h1 {
+    color: var(--text-color);
     font-size: 65px;
     font-weight: bold;
 }
 
 .home-banner p {
     font-size: 20px;
-    color: var(--sec-color);
+    color: var(--text-color);
+    font-weight: 500;
 }
 
 .btn-success {
@@ -70,7 +72,7 @@
 }
 
 .latest-music {
-    padding: 100px 0;
+    padding: 100px 20px;
     background-color: var(--bg-color);
 }
 
@@ -145,4 +147,26 @@
     padding: 10px;
     border-radius: 8px;
     transition: 0.3s;
+}
+
+@media screen and (max-width: 792px) {
+
+    .home-banner h1 {
+        font-size: 55px;
+    }
+
+    .home-banner p {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 482px) {
+
+    .home-banner h1 {
+        font-size: 45px;
+    }
+
+    .home-banner p {
+        font-size: 14px;
+    }
 }
