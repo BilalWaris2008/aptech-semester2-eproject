@@ -97,7 +97,7 @@ include("./includes/config.php")
 
     <section class="latest-music">
 
-        <section class="music-container">
+        <section class="container">
 
             <section class="music-title">
                 <h2>Latest Music</h2>
@@ -260,7 +260,139 @@ include("./includes/config.php")
     </section>
 
 
-    
+
+    <!-- Artists Section -->
+
+    <section class="artists-section">
+
+        <div class="container">
+
+            <div class="artists-title">
+
+                <h2>Popular Artists</h2>
+
+                <p>
+                    Listen to songs from your favorite artists
+                </p>
+
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- Artist 1 -->
+
+                <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+
+                    <div class="artist-card">
+
+                        <img
+                            src="https://i.scdn.co/image/ab6761610000e5ebfc043bea91ac91c222d235c9"
+                            alt="Artist">
+
+                        <h5>Atif Aslam</h5>
+
+                        <span>Artist</span>
+
+                    </div>
+
+                </div>
+
+                <!-- Artist 2 -->
+
+                <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+
+                    <div class="artist-card">
+
+                        <img
+                            src="https://i.scdn.co/image/ab6761610000e5ebfc043bea91ac91c222d235c9"
+                            alt="Artist">
+
+                        <h5>Arijit Singh</h5>
+
+                        <span>Singer</span>
+
+                    </div>
+
+                </div>
+
+                <!-- Artist 3 -->
+
+                <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+
+                    <div class="artist-card">
+
+                        <img
+                            src="https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9"
+                            alt="Artist">
+
+                        <h5>Taylor Swift</h5>
+
+                        <span>Pop Artist</span>
+
+                    </div>
+
+                </div>
+
+                <!-- Artist 4 -->
+
+                <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+
+                    <div class="artist-card">
+
+                        <img
+                            src="https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9"
+                            alt="Artist">
+
+                        <h5>The Weeknd</h5>
+
+                        <span>Artist</span>
+
+                    </div>
+
+                </div>
+
+                <!-- Artist 5 -->
+
+                <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+
+                    <div class="artist-card">
+
+                        <img
+                            src="https://i.scdn.co/image/ab6761610000e5eb3bcef85e105dfc42399ef0ba"
+                            alt="Artist">
+
+                        <h5>Ed Sheeran</h5>
+
+                        <span>Singer</span>
+
+                    </div>
+
+                </div>
+
+                <!-- Artist 6 -->
+
+                <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+
+                    <div class="artist-card">
+
+                        <img
+                            src="https://i.scdn.co/image/ab6761610000e5eb3bcef85e105dfc42399ef0ba"
+                            alt="Artist">
+
+                        <h5>Dua Lipa</h5>
+
+                        <span>Pop Artist</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
 
 </body>
 
