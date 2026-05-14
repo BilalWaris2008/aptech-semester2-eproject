@@ -64,7 +64,7 @@ include("./includes/config.php")
                     <a href="#" class="btn btn-outline-light">
                         Login
                     </a>
-                    <a href="#" class="btn btn-success">
+                    <a href="#" class="btn btn-success register-btn">
                         Register
                     </a>
                 </section>
@@ -82,7 +82,7 @@ include("./includes/config.php")
 
         <p>Latest Songs & Entertainment Anytime</p>
 
-        <button class="btn btn-success btn-lg mt-3 px-5">
+        <button class="btn btn-success btn-lg mt-3 px-5 explore-btn">
             Explore Now
         </button>
 
@@ -253,10 +253,6 @@ include("./includes/config.php")
         </section>
 
     </section>
-
-
-
-    
 
 
 </body>
