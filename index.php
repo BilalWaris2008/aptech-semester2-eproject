@@ -15,6 +15,9 @@ include("./includes/config.php")
     <!-- Bootstrap 5 CSS CDN  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <!-- Bootstrap Icon CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
+
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
@@ -71,7 +74,6 @@ include("./includes/config.php")
 
 
 
-
     <section class="home-banner">
 
         <div>
@@ -85,7 +87,6 @@ include("./includes/config.php")
         </button>
 
     </section>
-
 
 
 
@@ -103,7 +104,7 @@ include("./includes/config.php")
 
                 <!-- music 1 -->
 
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6 col-sm-12">
 
                     <div class="music-card">
 
@@ -132,7 +133,7 @@ include("./includes/config.php")
 
                 <!-- music 2 -->
 
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6 col-sm-12">
 
                     <div class="music-card">
 
@@ -161,12 +162,12 @@ include("./includes/config.php")
 
                 <!-- music 3 -->
 
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6 col-sm-12">
 
                     <div class="music-card">
 
                         <div class="music-img">
-                            <img src="./assets/latestmusic3.avif" alt="Song">
+                            <img src="./assets/latestmusic3.png" alt="Song">
                             <span class="new-badge">
                                 NEW
                             </span>
@@ -190,7 +191,37 @@ include("./includes/config.php")
 
                 <!-- music 4 -->
 
-                <div class="col-lg-3 col-md-6">
+                 <div class="col-lg-4 col-md-6 col-sm-12">
+
+                    <div class="music-card">
+
+                        <div class="music-img">
+                            <img src="./assets/latestmusic4.png" alt="Song">
+                            <span class="new-badge">
+                                NEW
+                            </span>
+                        </div>
+
+                        <div class="music-content">
+
+                            <h4>Shape Of You</h4>
+                            <p>Ed Sheeran</p>
+
+                            <button class="play-btn">
+                                <i class="bi bi-play-fill"></i>
+                                Play Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- music 5 -->
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
 
                     <div class="music-card">
 
