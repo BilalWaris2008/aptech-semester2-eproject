@@ -26,7 +26,7 @@ include("./includes/config.php")
 
 
     <nav class="navbar navbar-expand-lg navbar-dark py-3 custom-navbar">
-        <div class="container">
+        <section class="container">
 
             <a class="navbar-brand" href="#">
                 SOUND GROUP
@@ -38,7 +38,7 @@ include("./includes/config.php")
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="menu">
+            <section class="collapse navbar-collapse" id="menu">
 
                 <ul class="navbar-nav mx-auto">
 
@@ -60,25 +60,25 @@ include("./includes/config.php")
 
                 </ul>
 
-                <div>
+                <section>
                     <a href="#" class="btn btn-outline-light">
                         Login
                     </a>
                     <a href="#" class="btn btn-success">
                         Register
                     </a>
-                </div>
-            </div>
-        </div>
+                </section>
+            </section>
+        </section>
     </nav>
 
 
 
     <section class="home-banner">
 
-        <div>
+        <section>
             <h1>Unlimited Music & Videos</h1>
-        </div>
+        </section>
 
         <p>Latest Songs & Entertainment Anytime</p>
 
@@ -92,30 +92,30 @@ include("./includes/config.php")
 
     <section class="latest-music">
 
-        <div class="music-container">
+        <section class="music-container">
 
-            <div class="music-title">
+            <section class="music-title">
                 <h2>Latest Music</h2>
                 <p> Discover newly added songs and trending music</p>
-            </div>
+            </section>
 
 
-            <div class="row g-4">
+            <section class="row g-4">
 
                 <!-- music 1 -->
 
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <section class="col-lg-4 col-md-6 col-sm-12">
 
-                    <div class="music-card">
+                    <section class="music-card">
 
-                        <div class="music-img">
+                        <section class="music-img">
                             <img src="./assets/latestmusic1.avif" alt="Song">
                             <span class="new-badge">
                                 NEW
                             </span>
-                        </div>
+                        </section>
 
-                        <div class="music-content">
+                        <section class="music-content">
 
                             <h4>Night Changes</h4>
                             <p>One Direction</p>
@@ -125,26 +125,26 @@ include("./includes/config.php")
                                 Play Now
                             </button>
 
-                        </div>
+                        </section>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
                 <!-- music 2 -->
 
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <section class="col-lg-4 col-md-6 col-sm-12">
 
-                    <div class="music-card">
+                    <section class="music-card">
 
-                        <div class="music-img">
+                        <section class="music-img">
                             <img src="./assets/latestmusic2.avif" alt="Song">
                             <span class="new-badge">
                                 NEW
                             </span>
-                        </div>
+                        </section>
 
-                        <div class="music-content">
+                        <section class="music-content">
 
                             <h4>Blinding Lights</h4>
                             <p>The Weeknd</p>
@@ -154,26 +154,26 @@ include("./includes/config.php")
                                 Play Now
                             </button>
 
-                        </div>
+                        </section>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
                 <!-- music 3 -->
 
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <section class="col-lg-4 col-md-6 col-sm-12">
 
-                    <div class="music-card">
+                    <section class="music-card">
 
-                        <div class="music-img">
+                        <section class="music-img">
                             <img src="./assets/latestmusic3.png" alt="Song">
                             <span class="new-badge">
                                 NEW
                             </span>
-                        </div>
+                        </section>
 
-                        <div class="music-content">
+                        <section class="music-content">
 
                             <h4>Perfect</h4>
                             <p>Ed Sheeran</p>
@@ -183,26 +183,26 @@ include("./includes/config.php")
                                 Play Now
                             </button>
 
-                        </div>
+                        </section>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
                 <!-- music 4 -->
 
-                 <div class="col-lg-4 col-md-6 col-sm-12">
+                 <section class="col-lg-4 col-md-6 col-sm-12">
 
-                    <div class="music-card">
+                    <section class="music-card">
 
-                        <div class="music-img">
+                        <section class="music-img">
                             <img src="./assets/latestmusic4.png" alt="Song">
                             <span class="new-badge">
                                 NEW
                             </span>
-                        </div>
+                        </section>
 
-                        <div class="music-content">
+                        <section class="music-content">
 
                             <h4>Shape Of You</h4>
                             <p>Ed Sheeran</p>
@@ -212,27 +212,27 @@ include("./includes/config.php")
                                 Play Now
                             </button>
 
-                        </div>
+                        </section>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
 
                 <!-- music 5 -->
 
-                <div class="col-lg-4 col-md-6 col-sm-12">
+                <section class="col-lg-4 col-md-6 col-sm-12">
 
-                    <div class="music-card">
+                    <section class="music-card">
 
-                        <div class="music-img">
+                        <section class="music-img">
                             <img src="./assets/homebanner-img.jfif" alt="Song">
                             <span class="new-badge">
                                 NEW
                             </span>
-                        </div>
+                        </section>
 
-                        <div class="music-content">
+                        <section class="music-content">
 
                             <h4>Closer</h4>
                             <p>The Chainsmokers</p>
@@ -242,17 +242,21 @@ include("./includes/config.php")
                                 Play Now
                             </button>
 
-                        </div>
+                        </section>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
-            </div>
+            </section>
 
-        </div>
+        </section>
 
     </section>
+
+
+
+    
 
 
 </body>
