@@ -114,7 +114,7 @@ include("./includes/config.php")
                     <section class="music-card">
 
                         <section class="music-img">
-                            <img src="./assets/latestmusic1.avif" alt="Song">
+                            <img src="./assets/images/music/musicimg1.png" alt="Song">
                             <span class="new-badge">
                                 NEW
                             </span>
@@ -122,8 +122,8 @@ include("./includes/config.php")
 
                         <section class="music-content">
 
-                            <h5>Night Changes</h5>
-                            <p>One Direction</p>
+                            <h5>Kahani Suno 2.0</h5>
+                            <p>Kaifi Khalil</p>
 
                             <button class="play-btn">
                                 <i class="bi bi-play-fill"></i>
@@ -143,7 +143,7 @@ include("./includes/config.php")
                     <section class="music-card">
 
                         <section class="music-img">
-                            <img src="./assets/latestmusic2.avif" alt="Song">
+                            <img src="./assets/images/music/musicimg2.png" alt="Song">
                             <span class="new-badge">
                                 NEW
                             </span>
@@ -151,8 +151,8 @@ include("./includes/config.php")
 
                         <section class="music-content">
 
-                            <h5>Blinding Lights</h5>
-                            <p>The Weeknd</p>
+                            <h5>Tu Hai Kahan</h5>
+                            <p>AUR</p>
 
                             <button class="play-btn">
                                 <i class="bi bi-play-fill"></i>
@@ -172,7 +172,7 @@ include("./includes/config.php")
                     <section class="music-card">
 
                         <section class="music-img">
-                            <img src="./assets/latestmusic3.png" alt="Song">
+                            <img src="./assets/images/music/musicimg3.png" alt="Song">
                             <span class="new-badge">
                                 NEW
                             </span>
@@ -201,7 +201,7 @@ include("./includes/config.php")
                     <section class="music-card">
 
                         <section class="music-img">
-                            <img src="./assets/latestmusic4.png" alt="Song">
+                            <img src="./assets/images/music/musicimg4.png" alt="Song">
                             <span class="new-badge">
                                 NEW
                             </span>
@@ -209,8 +209,8 @@ include("./includes/config.php")
 
                         <section class="music-content">
 
-                            <h5>Shape Of You</h5>
-                            <p>Ed Sheeran</p>
+                            <h5>Night Changes</h5>
+                            <p>One Direction</p>
 
                             <button class="play-btn">
                                 <i class="bi bi-play-fill"></i>
@@ -231,7 +231,7 @@ include("./includes/config.php")
                     <section class="music-card">
 
                         <section class="music-img">
-                            <img src="./assets/homebanner-img.jfif" alt="Song">
+                            <img src="./assets/images/music/musicimg5.png" alt="Song">
                             <span class="new-badge">
                                 NEW
                             </span>
@@ -239,8 +239,8 @@ include("./includes/config.php")
 
                         <section class="music-content">
 
-                            <h5>Closer</h5>
-                            <p>The Chainsmokers</p>
+                            <h5>Shikayat</h5>
+                            <p>AUR</p>
 
                             <button class="play-btn">
                                 <i class="bi bi-play-fill"></i>
