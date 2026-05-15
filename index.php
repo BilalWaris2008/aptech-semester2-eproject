@@ -265,9 +265,9 @@ include("./includes/config.php")
 
     <section class="artists-section">
 
-        <div class="container">
+        <section class="container">
 
-            <div class="artists-title">
+            <section class="artists-title">
 
                 <h2>Popular Artists</h2>
 
@@ -275,15 +275,15 @@ include("./includes/config.php")
                     Listen to songs from your favorite artists
                 </p>
 
-            </div>
+            </section>
 
-            <div class="row g-4 justify-content-center">
+            <section class="row g-4 justify-content-center">
 
                 <!-- Artist 1 -->
 
-                <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                <section class="col-xl-2 col-lg-3 col-md-4 col-6">
 
-                    <div class="artist-card">
+                    <section class="artist-card">
 
                         <img
                             src="https://i.scdn.co/image/ab6761610000e5ebfc043bea91ac91c222d235c9"
@@ -293,15 +293,15 @@ include("./includes/config.php")
 
                         <span>Artist</span>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
                 <!-- Artist 2 -->
 
-                <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                <section class="col-xl-2 col-lg-3 col-md-4 col-6">
 
-                    <div class="artist-card">
+                    <section class="artist-card">
 
                         <img
                             src="https://i.scdn.co/image/ab6761610000e5ebfc043bea91ac91c222d235c9"
@@ -311,15 +311,15 @@ include("./includes/config.php")
 
                         <span>Singer</span>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
                 <!-- Artist 3 -->
 
-                <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                <section class="col-xl-2 col-lg-3 col-md-4 col-6">
 
-                    <div class="artist-card">
+                    <section class="artist-card">
 
                         <img
                             src="https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9"
@@ -329,15 +329,15 @@ include("./includes/config.php")
 
                         <span>Pop Artist</span>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
                 <!-- Artist 4 -->
 
-                <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                <section class="col-xl-2 col-lg-3 col-md-4 col-6">
 
-                    <div class="artist-card">
+                    <section class="artist-card">
 
                         <img
                             src="https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9"
@@ -347,15 +347,15 @@ include("./includes/config.php")
 
                         <span>Artist</span>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
                 <!-- Artist 5 -->
 
-                <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                <section class="col-xl-2 col-lg-3 col-md-4 col-6">
 
-                    <div class="artist-card">
+                    <section class="artist-card">
 
                         <img
                             src="https://i.scdn.co/image/ab6761610000e5eb3bcef85e105dfc42399ef0ba"
@@ -365,15 +365,15 @@ include("./includes/config.php")
 
                         <span>Singer</span>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
                 <!-- Artist 6 -->
 
-                <div class="col-xl-2 col-lg-3 col-md-4 col-6">
+                <section class="col-xl-2 col-lg-3 col-md-4 col-6">
 
-                    <div class="artist-card">
+                    <section class="artist-card">
 
                         <img
                             src="https://i.scdn.co/image/ab6761610000e5eb3bcef85e105dfc42399ef0ba"
@@ -383,13 +383,13 @@ include("./includes/config.php")
 
                         <span>Pop Artist</span>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
-            </div>
+            </section>
 
-        </div>
+        </section>
 
     </section>
 
@@ -400,9 +400,9 @@ include("./includes/config.php")
 
     <section class="latest-videos">
 
-        <div class="container">
+        <section class="container">
 
-            <div class="videos-title">
+            <section class="videos-title">
 
                 <h2>Latest Videos</h2>
 
@@ -410,75 +410,115 @@ include("./includes/config.php")
                     Watch trending music videos and latest releases
                 </p>
 
-            </div>
+            </section>
 
-            <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 row-cols-lg-5 g-4">
+            <section class="row row-cols-1 row-cols-md-3 row-cols-sm-2 row-cols-lg-5 g-4">
 
                 <!-- Video 1 -->
 
-                <div class="col">
+                <section class="col">
 
-                    <div class="video-card">
+                    <section class="video-card">
 
-                        <div class="video-image">
+                        <section class="video-image">
 
                             <img
-                                src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop"
+                                src="./assets/images/music/musicimg1.png"
                                 alt="Video">
 
-                            <div class="video-play-icon">
+                            <section class="video-play-icon">
 
                                 <i class="bi bi-play-fill"></i>
 
-                            </div>
+                            </section>
 
                             <span class="new-badge">
                                 NEW
                             </span>
 
-                        </div>
+                        </section>
 
-                        <div class="video-content">
+                        <section class="video-content">
 
-                            <h5>Blinding Lights</h5>
+                            <h5>Kahani Suno 2.0</h5>
 
-                            <p>The Weeknd</p>
+                            <p>Kaifi Khalil</p>
 
                             <a href="#" class="watch-btn">
                                 Watch Now
                             </a>
 
-                        </div>
+                        </section>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
                 <!-- Video 2 -->
 
-                <div class="col">
+                <section class="col">
 
-                    <div class="video-card">
+                    <section class="video-card">
 
-                        <div class="video-image">
+                        <section class="video-image">
 
                             <img
-                                src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop"
+                                src="./assets/images/music/musicimg2.png"
                                 alt="Video">
 
-                            <div class="video-play-icon">
+                            <section class="video-play-icon">
 
                                 <i class="bi bi-play-fill"></i>
 
-                            </div>
+                            </section>
 
                             <span class="new-badge">
                                 NEW
                             </span>
 
-                        </div>
+                        </section>
 
-                        <div class="video-content">
+                        <section class="video-content">
+
+                            <h5>Tu Hai Kahan</h5>
+
+                            <p>AUR</p>
+
+                            <a href="#" class="watch-btn">
+                                Watch Now
+                            </a>
+
+                        </section>
+
+                    </section>
+
+                </section>
+
+                <!-- Video 3 -->
+
+                <section class="col">
+
+                    <section class="video-card">
+
+                        <section class="video-image">
+
+                            <img
+                                src="./assets/images/music/musicimg3.png"
+                                alt="Video">
+
+                            <section class="video-play-icon">
+
+                                <i class="bi bi-play-fill"></i>
+
+                            </section>
+
+                            <span class="new-badge">
+                                NEW
+                            </span>
+
+                        </section>
+
+                        <section class="video-content">
 
                             <h5>Perfect</h5>
 
@@ -488,37 +528,37 @@ include("./includes/config.php")
                                 Watch Now
                             </a>
 
-                        </div>
+                        </section>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
-                <!-- Video 3 -->
+                <!-- Video 4 -->
 
-                <div class="col">
+                <section class="col">
 
-                    <div class="video-card">
+                    <section class="video-card">
 
-                        <div class="video-image">
+                        <section class="video-image">
 
                             <img
-                                src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop"
+                                src="./assets/images/music/musicimg4.png"
                                 alt="Video">
 
-                            <div class="video-play-icon">
+                            <section class="video-play-icon">
 
                                 <i class="bi bi-play-fill"></i>
 
-                            </div>
+                            </section>
 
                             <span class="new-badge">
                                 NEW
                             </span>
 
-                        </div>
+                        </section>
 
-                        <div class="video-content">
+                        <section class="video-content">
 
                             <h5>Night Changes</h5>
 
@@ -528,95 +568,55 @@ include("./includes/config.php")
                                 Watch Now
                             </a>
 
-                        </div>
+                        </section>
 
-                    </div>
+                    </section>
 
-                </div>
-
-                <!-- Video 4 -->
-
-                <div class="col">
-
-                    <div class="video-card">
-
-                        <div class="video-image">
-
-                            <img
-                                src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1200&auto=format&fit=crop"
-                                alt="Video">
-
-                            <div class="video-play-icon">
-
-                                <i class="bi bi-play-fill"></i>
-
-                            </div>
-
-                            <span class="new-badge">
-                                NEW
-                            </span>
-
-                        </div>
-
-                        <div class="video-content">
-
-                            <h5>Closer</h5>
-
-                            <p>The Chainsmokers</p>
-
-                            <a href="#" class="watch-btn">
-                                Watch Now
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </div>
+                </section>
 
                 <!-- Video 5 -->
 
-                <div class="col">
+                <section class="col">
 
-                    <div class="video-card">
+                    <section class="video-card">
 
-                        <div class="video-image">
+                        <section class="video-image">
 
                             <img
-                                src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=1200&auto=format&fit=crop"
+                                src="./assets/images/music/musicimg5.png"
                                 alt="Video">
 
-                            <div class="video-play-icon">
+                            <section class="video-play-icon">
 
                                 <i class="bi bi-play-fill"></i>
 
-                            </div>
+                            </section>
 
                             <span class="new-badge">
                                 NEW
                             </span>
 
-                        </div>
+                        </section>
 
-                        <div class="video-content">
+                        <section class="video-content">
 
-                            <h5>Levitating</h5>
+                            <h5>Shikayat</h5>
 
-                            <p>Dua Lipa</p>
+                            <p>AUR</p>
 
                             <a href="#" class="watch-btn">
                                 Watch Now
                             </a>
 
-                        </div>
+                        </section>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
-            </div>
+            </section>
 
-        </div>
+        </section>
 
     </section>
 
