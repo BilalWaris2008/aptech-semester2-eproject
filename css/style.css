@@ -112,45 +112,54 @@ body {
 
 /* Latest Music */
 
-.latest-music {
+.latest-music,
+.latest-videos {
     padding: 100px 0;
 }
 
 .music-title,
-.artists-title {
+.artists-title,
+.videos-title {
     text-align: center;
     margin-bottom: 50px;
 }
 
 .music-title h2,
-.artists-title h2 {
+.artists-title h2,
+.videos-title h2 {
     color: var(--text-color);
     font-size: 40px;
     font-weight: 700;
 }
 
 .music-title p,
-.artists-title p {
+.artists-title p,
+.videos-title p {
     color: var(--sec-text-color);
     margin-top: 10px;
 }
 
-.music-card {
+.music-card,
+.video-card {
     background-color: #1a1a1a;
     border-radius: 12px;
     overflow: hidden;
     transition: 0.3s;
 }
 
-.music-card:hover,.artist-card:hover {
+.music-card:hover,
+.artist-card:hover,
+.video-card:hover {
     transform: translateY(-8px);
 }
 
-.music-img {
+.music-img,
+.video-image {
     position: relative;
 }
 
-.music-img img {
+.music-img img,
+.video-image img {
     width: 100%;
     height: 130px;
     object-fit: cover;
@@ -168,17 +177,20 @@ body {
     border-radius: 30px;
 }
 
-.music-content {
+.music-content,
+.video-content {
     padding: 15px;
 }
 
-.music-content h5 {
+.music-content h5,
+.video-content h5 {
     color: var(--text-color);
     margin-bottom: 8px;
     font-size: 20px;
 }
 
-.music-content p {
+.music-content p,
+.video-content p {
     color: var(--sec-color);
     margin-bottom: 20px;
     font-size: 14px;
@@ -228,19 +240,44 @@ body {
     font-size: 14px;
 }
 
+/* Latest Videos  */
 
+.video-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65px;
+    height: 65px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 
+.video-play-icon i {
+    color: var(--text-color);
+    font-size: 30px;
+}
 
+.watch-btn {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
 
-
-
-
-
-
-
-
-
-
+.watch-btn:hover {
+    background-color: var(--btn-hover-color);
+    color: var(--text-color);
+}
 
 
 /* Media Queries */
@@ -269,6 +306,24 @@ body {
     .artist-card span {
         font-size: 12px;
     }
+
+    .video-image img {
+        height: 210px;
+    }
+
+    .video-content h4 {
+        font-size: 18px;
+    }
+
+    .video-play-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .video-play-icon i {
+        font-size: 24px;
+    }
+
 }
 
 @media screen and (max-width: 482px) {
