@@ -374,7 +374,6 @@ include("./includes/config.php")
 
 
 
-
     <!-- Videos Section  -->
 
     <section class="latest-videos">
@@ -578,6 +577,136 @@ include("./includes/config.php")
         </section>
 
     </section>
+
+
+
+
+    <!-- Genres Section -->
+
+    <section class="genres-section">
+
+        <section class="container">
+
+            <section class="genres-title">
+
+                <h2>Browse Genres</h2>
+                <p>Discover music and videos by category</p>
+
+            </section>
+
+            <section class="row g-4">
+
+                <!-- Genre Card 1 -->
+
+                <section class="col-lg-3 col-md-6">
+
+                    <section class="genre-card genre-1">
+
+                        <h3>Pop</h3>
+                        <i class="bi bi-music-note-beamed"></i>
+
+                    </section>
+
+                </section>
+
+                <!-- Genre Card 2 -->
+
+                <section class="col-lg-3 col-md-6">
+
+                    <section class="genre-card genre-2">
+
+                        <h3>Hip Hop</h3>
+                        <i class="bi bi-headphones"></i>
+
+                    </section>
+
+                </section>
+
+                <!-- Genre Card 3 -->
+
+                <section class="col-lg-3 col-md-6">
+
+                    <section class="genre-card genre-3">
+
+                        <h3>Rock</h3>
+                        <i class="bi bi-vinyl-fill"></i>
+
+                    </section>
+
+                </section>
+
+                <!-- Genre Card 4 -->
+
+                <section class="col-lg-3 col-md-6">
+
+                    <section class="genre-card genre-4">
+
+                        <h3>Jazz</h3>
+                        <i class="bi bi-mic-fill"></i>
+
+                    </section>
+
+                </section>
+
+                <!-- Genre Card 5 -->
+
+                <section class="col-lg-3 col-md-6">
+
+                    <section class="genre-card genre-5">
+
+                        <h3>English</h3>
+                        <i class="bi bi-disc-fill"></i>
+
+                    </section>
+
+                </section>
+
+                <!-- Genre Card 6 -->
+
+                <section class="col-lg-3 col-md-6">
+
+                    <section class="genre-card genre-6">
+
+                        <h3>Regional</h3>
+                        <i class="bi bi-boombox-fill"></i>
+
+                    </section>
+
+                </section>
+
+                <!-- Genre Card 7 -->
+
+                <section class="col-lg-3 col-md-6">
+
+                    <section class="genre-card genre-7">
+
+                        <h3>Classical</h3>
+                        <i class="bi bi-music-player-fill"></i>
+
+                    </section>
+
+                </section>
+
+                <!-- Genre Card 8 -->
+
+                <section class="col-lg-3 col-md-6">
+
+                    <section class="genre-card genre-8">
+
+                        <h3>Party</h3>
+                        <i class="bi bi-speaker-fill"></i>
+
+                    </section>
+
+                </section>
+
+            </section>
+
+        </section>
+
+    </section>
+
+
 
 
 
