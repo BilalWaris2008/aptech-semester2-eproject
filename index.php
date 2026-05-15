@@ -394,6 +394,235 @@ include("./includes/config.php")
     </section>
 
 
+
+
+    <!-- Videos Section  -->
+
+    <section class="latest-videos">
+
+        <div class="container">
+
+            <div class="videos-title">
+
+                <h2>Latest Videos</h2>
+
+                <p>
+                    Watch trending music videos and latest releases
+                </p>
+
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 row-cols-sm-2 row-cols-lg-5 g-4">
+
+                <!-- Video 1 -->
+
+                <div class="col">
+
+                    <div class="video-card">
+
+                        <div class="video-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop"
+                                alt="Video">
+
+                            <div class="video-play-icon">
+
+                                <i class="bi bi-play-fill"></i>
+
+                            </div>
+
+                            <span class="new-badge">
+                                NEW
+                            </span>
+
+                        </div>
+
+                        <div class="video-content">
+
+                            <h5>Blinding Lights</h5>
+
+                            <p>The Weeknd</p>
+
+                            <a href="#" class="watch-btn">
+                                Watch Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Video 2 -->
+
+                <div class="col">
+
+                    <div class="video-card">
+
+                        <div class="video-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?q=80&w=1200&auto=format&fit=crop"
+                                alt="Video">
+
+                            <div class="video-play-icon">
+
+                                <i class="bi bi-play-fill"></i>
+
+                            </div>
+
+                            <span class="new-badge">
+                                NEW
+                            </span>
+
+                        </div>
+
+                        <div class="video-content">
+
+                            <h5>Perfect</h5>
+
+                            <p>Ed Sheeran</p>
+
+                            <a href="#" class="watch-btn">
+                                Watch Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Video 3 -->
+
+                <div class="col">
+
+                    <div class="video-card">
+
+                        <div class="video-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1200&auto=format&fit=crop"
+                                alt="Video">
+
+                            <div class="video-play-icon">
+
+                                <i class="bi bi-play-fill"></i>
+
+                            </div>
+
+                            <span class="new-badge">
+                                NEW
+                            </span>
+
+                        </div>
+
+                        <div class="video-content">
+
+                            <h5>Night Changes</h5>
+
+                            <p>One Direction</p>
+
+                            <a href="#" class="watch-btn">
+                                Watch Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Video 4 -->
+
+                <div class="col">
+
+                    <div class="video-card">
+
+                        <div class="video-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1200&auto=format&fit=crop"
+                                alt="Video">
+
+                            <div class="video-play-icon">
+
+                                <i class="bi bi-play-fill"></i>
+
+                            </div>
+
+                            <span class="new-badge">
+                                NEW
+                            </span>
+
+                        </div>
+
+                        <div class="video-content">
+
+                            <h5>Closer</h5>
+
+                            <p>The Chainsmokers</p>
+
+                            <a href="#" class="watch-btn">
+                                Watch Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Video 5 -->
+
+                <div class="col">
+
+                    <div class="video-card">
+
+                        <div class="video-image">
+
+                            <img
+                                src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?q=80&w=1200&auto=format&fit=crop"
+                                alt="Video">
+
+                            <div class="video-play-icon">
+
+                                <i class="bi bi-play-fill"></i>
+
+                            </div>
+
+                            <span class="new-badge">
+                                NEW
+                            </span>
+
+                        </div>
+
+                        <div class="video-content">
+
+                            <h5>Levitating</h5>
+
+                            <p>Dua Lipa</p>
+
+                            <a href="#" class="watch-btn">
+                                Watch Now
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
 </body>
 
 <!-- Bootstrap 5 JS CDN -->
