@@ -13,10 +13,12 @@ include("./includes/config.php")
     <title>Sound Group</title>
 
     <!-- Bootstrap 5 CSS CDN  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- Bootstrap Icon CDN  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
 
     <!-- CSS Link -->
     <link rel="stylesheet" href="./css/style.css">
@@ -35,9 +37,7 @@ include("./includes/config.php")
                 SOUND GROUP
             </a>
 
-            <button class="navbar-toggler"
-                data-bs-toggle="collapse"
-                data-bs-target="#menu">
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -270,10 +270,7 @@ include("./includes/config.php")
             <section class="artists-title">
 
                 <h2>Popular Artists</h2>
-
-                <p>
-                    Listen to songs from your favorite artists
-                </p>
+                <p>Listen to songs from your favorite artists</p>
 
             </section>
 
@@ -285,12 +282,9 @@ include("./includes/config.php")
 
                     <section class="artist-card">
 
-                        <img
-                            src="https://i.scdn.co/image/ab6761610000e5ebfc043bea91ac91c222d235c9"
-                            alt="Artist">
+                        <img src="./assets/images/artists/artistimg1.png" alt="Artist">
 
                         <h5>Atif Aslam</h5>
-
                         <span>Artist</span>
 
                     </section>
@@ -303,12 +297,9 @@ include("./includes/config.php")
 
                     <section class="artist-card">
 
-                        <img
-                            src="https://i.scdn.co/image/ab6761610000e5ebfc043bea91ac91c222d235c9"
-                            alt="Artist">
+                        <img src="./assets/images/artists/artistimg2.png" alt="Artist">
 
                         <h5>Arijit Singh</h5>
-
                         <span>Singer</span>
 
                     </section>
@@ -321,12 +312,9 @@ include("./includes/config.php")
 
                     <section class="artist-card">
 
-                        <img
-                            src="https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9"
-                            alt="Artist">
+                        <img src="./assets/images/artists/artistimg3.png" alt="Artist">
 
-                        <h5>Taylor Swift</h5>
-
+                        <h5>One Direction</h5>
                         <span>Pop Artist</span>
 
                     </section>
@@ -339,12 +327,9 @@ include("./includes/config.php")
 
                     <section class="artist-card">
 
-                        <img
-                            src="https://i.scdn.co/image/ab6761610000e5eb4293385d324db8558179afd9"
-                            alt="Artist">
+                        <img src="./assets/images/music/musicimg1.png" alt="Artist">
 
-                        <h5>The Weeknd</h5>
-
+                        <h5>Kaifi Khalil</h5>
                         <span>Artist</span>
 
                     </section>
@@ -357,12 +342,9 @@ include("./includes/config.php")
 
                     <section class="artist-card">
 
-                        <img
-                            src="https://i.scdn.co/image/ab6761610000e5eb3bcef85e105dfc42399ef0ba"
-                            alt="Artist">
+                        <img src="./assets/images/artists/artistimg5.png" alt="Artist">
 
-                        <h5>Ed Sheeran</h5>
-
+                        <h5>AUR</h5>
                         <span>Singer</span>
 
                     </section>
@@ -375,13 +357,10 @@ include("./includes/config.php")
 
                     <section class="artist-card">
 
-                        <img
-                            src="https://i.scdn.co/image/ab6761610000e5eb3bcef85e105dfc42399ef0ba"
-                            alt="Artist">
+                        <img src="./assets/images/artists/artistimg6.png" alt="Artist">
 
-                        <h5>Dua Lipa</h5>
-
-                        <span>Pop Artist</span>
+                        <h5>Anuv Jain</h5>
+                        <span>Artist</span>
 
                     </section>
 
@@ -405,10 +384,7 @@ include("./includes/config.php")
             <section class="videos-title">
 
                 <h2>Latest Videos</h2>
-
-                <p>
-                    Watch trending music videos and latest releases
-                </p>
+                <p>Watch trending music videos and latest releases</p>
 
             </section>
 
@@ -422,14 +398,10 @@ include("./includes/config.php")
 
                         <section class="video-image">
 
-                            <img
-                                src="./assets/images/music/musicimg1.png"
-                                alt="Video">
+                            <img src="./assets/images/music/musicimg1.png" alt="Video">
 
                             <section class="video-play-icon">
-
                                 <i class="bi bi-play-fill"></i>
-
                             </section>
 
                             <span class="new-badge">
@@ -441,7 +413,6 @@ include("./includes/config.php")
                         <section class="video-content">
 
                             <h5>Kahani Suno 2.0</h5>
-
                             <p>Kaifi Khalil</p>
 
                             <a href="#" class="watch-btn">
@@ -462,9 +433,7 @@ include("./includes/config.php")
 
                         <section class="video-image">
 
-                            <img
-                                src="./assets/images/music/musicimg2.png"
-                                alt="Video">
+                            <img src="./assets/images/music/musicimg2.png" alt="Video">
 
                             <section class="video-play-icon">
 
@@ -481,7 +450,6 @@ include("./includes/config.php")
                         <section class="video-content">
 
                             <h5>Tu Hai Kahan</h5>
-
                             <p>AUR</p>
 
                             <a href="#" class="watch-btn">
@@ -502,9 +470,7 @@ include("./includes/config.php")
 
                         <section class="video-image">
 
-                            <img
-                                src="./assets/images/music/musicimg3.png"
-                                alt="Video">
+                            <img src="./assets/images/music/musicimg3.png" alt="Video">
 
                             <section class="video-play-icon">
 
@@ -521,7 +487,6 @@ include("./includes/config.php")
                         <section class="video-content">
 
                             <h5>Perfect</h5>
-
                             <p>Ed Sheeran</p>
 
                             <a href="#" class="watch-btn">
@@ -542,9 +507,7 @@ include("./includes/config.php")
 
                         <section class="video-image">
 
-                            <img
-                                src="./assets/images/music/musicimg4.png"
-                                alt="Video">
+                            <img src="./assets/images/music/musicimg4.png" alt="Video">
 
                             <section class="video-play-icon">
 
@@ -561,7 +524,6 @@ include("./includes/config.php")
                         <section class="video-content">
 
                             <h5>Night Changes</h5>
-
                             <p>One Direction</p>
 
                             <a href="#" class="watch-btn">
@@ -582,9 +544,7 @@ include("./includes/config.php")
 
                         <section class="video-image">
 
-                            <img
-                                src="./assets/images/music/musicimg5.png"
-                                alt="Video">
+                            <img src="./assets/images/music/musicimg5.png" alt="Video">
 
                             <section class="video-play-icon">
 
@@ -601,7 +561,6 @@ include("./includes/config.php")
                         <section class="video-content">
 
                             <h5>Shikayat</h5>
-
                             <p>AUR</p>
 
                             <a href="#" class="watch-btn">
@@ -626,6 +585,8 @@ include("./includes/config.php")
 </body>
 
 <!-- Bootstrap 5 JS CDN -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
 
 </html>
