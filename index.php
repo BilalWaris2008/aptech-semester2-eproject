@@ -1,79 +1,9 @@
 <?php
 
-include("./includes/config.php")
+include("./includes/config.php");
+include("./includes/header.php");
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sound Group</title>
-
-    <!-- Bootstrap 5 CSS CDN  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <!-- Bootstrap Icon CDN  -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
-
-    <!-- CSS Link -->
-    <link rel="stylesheet" href="./css/style.css">
-
-</head>
-
-<body>
-
-
-    <!-- Navbar Start -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark py-3 custom-navbar">
-        <section class="container">
-
-            <a class="navbar-brand" href="#">
-                SOUND GROUP
-            </a>
-
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <section class="collapse navbar-collapse" id="menu">
-
-                <ul class="navbar-nav mx-auto">
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Music</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Videos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Artists</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Albums</a>
-                    </li>
-
-                </ul>
-
-                <section>
-                    <a href="./auth/login.php" class="btn btn-outline-light">
-                        Login
-                    </a>
-                    <a href="./auth/register.php" class="btn btn-success register-btn">
-                        Register
-                    </a>
-                </section>
-            </section>
-        </section>
-    </nav>
 
 
     <!-- Banner -->
@@ -122,7 +52,7 @@ include("./includes/config.php")
 
                         <section class="music-content">
 
-                            <h5>Kahani Suno 2.0</h5>
+                            <h5>Kahani Suno</h5>
                             <p>Kaifi Khalil</p>
 
                             <button class="play-btn">
@@ -411,7 +341,7 @@ include("./includes/config.php")
 
                         <section class="video-content">
 
-                            <h5>Kahani Suno 2.0</h5>
+                            <h5>Kahani Suno</h5>
                             <p>Kaifi Khalil</p>
 
                             <a href="#" class="watch-btn">
@@ -598,7 +528,7 @@ include("./includes/config.php")
 
                 <!-- Genre Card 1 -->
 
-                <section class="col-lg-3 col-md-6">
+                <section class="col-lg-3 col-md-6 col-sm-6">
 
                     <section class="genre-card genre-1">
 
@@ -611,7 +541,7 @@ include("./includes/config.php")
 
                 <!-- Genre Card 2 -->
 
-                <section class="col-lg-3 col-md-6">
+                <section class="col-lg-3 col-md-6 col-sm-6">
 
                     <section class="genre-card genre-2">
 
@@ -624,7 +554,7 @@ include("./includes/config.php")
 
                 <!-- Genre Card 3 -->
 
-                <section class="col-lg-3 col-md-6">
+                <section class="col-lg-3 col-md-6 col-sm-6">
 
                     <section class="genre-card genre-3">
 
@@ -637,7 +567,7 @@ include("./includes/config.php")
 
                 <!-- Genre Card 4 -->
 
-                <section class="col-lg-3 col-md-6">
+                <section class="col-lg-3 col-md-6 col-sm-6">
 
                     <section class="genre-card genre-4">
 
@@ -650,7 +580,7 @@ include("./includes/config.php")
 
                 <!-- Genre Card 5 -->
 
-                <section class="col-lg-3 col-md-6">
+                <section class="col-lg-3 col-md-6 col-sm-6">
 
                     <section class="genre-card genre-5">
 
@@ -663,7 +593,7 @@ include("./includes/config.php")
 
                 <!-- Genre Card 6 -->
 
-                <section class="col-lg-3 col-md-6">
+                <section class="col-lg-3 col-md-6 col-sm-6">
 
                     <section class="genre-card genre-6">
 
@@ -676,7 +606,7 @@ include("./includes/config.php")
 
                 <!-- Genre Card 7 -->
 
-                <section class="col-lg-3 col-md-6">
+                <section class="col-lg-3 col-md-6 col-sm-6">
 
                     <section class="genre-card genre-7">
 
@@ -689,7 +619,7 @@ include("./includes/config.php")
 
                 <!-- Genre Card 8 -->
 
-                <section class="col-lg-3 col-md-6">
+                <section class="col-lg-3 col-md-6 col-sm-6">
 
                     <section class="genre-card genre-8">
 
@@ -707,15 +637,8 @@ include("./includes/config.php")
     </section>
 
 
+<?php
 
+include("./includes/footer.php");
 
-
-
-</body>
-
-<!-- Bootstrap 5 JS CDN -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-</script>
-
-</html>
+?>
