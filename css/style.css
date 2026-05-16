@@ -96,7 +96,7 @@ body {
     color: var(--text-color);
     font-size: 65px;
     font-weight: 650;
-    text-shadow: 0 0 2px white;
+    text-shadow: 0 0 2px var(--text-color);
 }
 
 .home-banner p {
@@ -350,8 +350,106 @@ body {
 }
 
 
+/* =========================
+   Footer Section
+========================= */
+
+.footer-section {
+    padding-top: 100px;
+    margin-top: 100px;
+}
+
+.footer-about h2 {
+    color: var(--main-color);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-shadow: 0 0 1px var(--text-color);
+}
+
+.footer-links ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 12px;
+}
+
+.footer-links ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: var(--main-color);
+}
+
+.footer-social p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    background-color: #1f1f1f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a i {
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+.social-icons a:hover {
+    background-color: var(--main-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid #222222;
+    margin-top: 60px;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--sec-color);
+    margin: 0;
+}
 
 /* Media Queries */
+
+@media screen and (max-width: 992px) {
+
+    .music-content h5,
+    .video-content h5 {
+        font-size: 17px;
+    }
+}
 
 @media screen and (max-width: 792px) {
 
@@ -361,6 +459,10 @@ body {
 
     .home-banner p {
         font-size: 17px;
+    }
+
+    .genre-card h3 {
+        font-size: 24px;
     }
 }
 
@@ -395,8 +497,14 @@ body {
         font-size: 24px;
     }
 
+    .latest-music,
+    .latest-videos,
+    .genres-section {
+        padding: 100px 30px;
+    }
+
     .genre-card {
-        height: 150px;
+        height: 110px;
     }
 
     .genre-card h3 {
@@ -406,15 +514,34 @@ body {
     .genre-card i {
         font-size: 55px;
     }
+
+    .footer-about,
+    .footer-links,
+    .footer-social {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
 }
 
 @media screen and (max-width: 482px) {
 
     .home-banner h1 {
-        font-size: 45px;
+        font-size: 40px;
+        padding: 10px;
     }
 
     .home-banner p {
         font-size: 14px;
     }
+
+    .latest-music,
+    .latest-videos,
+    .genres-section {
+        padding: 100px 10px;
+    }
+
 }
