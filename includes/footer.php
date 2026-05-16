@@ -2,13 +2,13 @@
 
     <footer class="footer-section">
 
-        <div class="container">
+        <section class="container">
 
-            <div class="row g-5">
+            <section class="row g-5">
 
-                <div class="col-lg-4">
+                <section class="col-lg-4">
 
-                    <div class="footer-about">
+                    <section class="footer-about">
 
                         <h2>SOUND GROUP</h2>
                         <p>
@@ -16,13 +16,13 @@
                             Discover trending songs, artists, albums and watch the latest videos anytime.
                         </p>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
-                <div class="col-lg-2 col-md-6">
+                <section class="col-lg-2 col-md-4 col-sm-4">
 
-                    <div class="footer-links">
+                    <section class="footer-links">
 
                         <h4>Quick Links</h4>
 
@@ -46,15 +46,15 @@
 
                         </ul>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
                 <!-- Categories -->
 
-                <div class="col-lg-2 col-md-6">
+                <section class="col-lg-2 col-md-4 col-sm-4">
 
-                    <div class="footer-links">
+                    <section class="footer-links">
 
                         <h4>Genres</h4>
 
@@ -78,18 +78,18 @@
 
                         </ul>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
-                <div class="col-lg-4">
+                <section class="col-lg-4 col-md-4 col-sm-4">
 
-                    <div class="footer-social">
+                    <section class="footer-social">
 
                         <h4>Follow Us</h4>
                         <p>Stay connected with us on social platforms.</p>
 
-                        <div class="social-icons">
+                        <section class="social-icons">
 
                             <a href="#">
                                 <i class="bi bi-facebook"></i>
@@ -107,21 +107,21 @@
                                 <i class="bi bi-youtube"></i>
                             </a>
 
-                        </div>
+                        </section>
 
-                    </div>
+                    </section>
 
-                </div>
+                </section>
 
-            </div>
+            </section>
 
-            <div class="footer-bottom">
+            <section class="footer-bottom">
 
                 <p>© 2026 SOUND GROUP. All Rights Reserved.</p>
 
-            </div>
+            </section>
 
-        </div>
+        </section>
 
     </footer>
 
