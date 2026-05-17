@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="register-card">
 
         <div class="logo">
-            <i class="fa-brands fa-spotify"></i>
+            <h1>SOUND GROUP</h1>
             <h2>Create Account</h2>
         </div>
 
