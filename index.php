@@ -509,8 +509,6 @@ include("./includes/header.php");
     </section>
 
 
-
-
     <!-- Genres Section -->
 
     <section class="genres-section">
