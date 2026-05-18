@@ -1,5 +1,9 @@
 <?php
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 include("./includes/config.php")
 
 ?>
@@ -64,9 +68,25 @@ include("./includes/config.php")
                 </ul>
 
                 <section>
-                    <a href="./auth/login.php" class="btn btn-outline-light">
-                        Login
-                    </a>
+                    <?php if (isset($_SESSION['user_id'])) { ?>
+
+                        <span class="text-white me-3">
+                            Welcome,
+                            <?php echo $_SESSION['user_name']; ?>
+
+                        </span>
+
+                        <a href="auth/logout.php" class="btn btn-success">
+                            Logout
+                        </a>
+
+                    <?php } else { ?>
+
+                        <a href="./auth/login.php" class="btn btn-success">
+                            Login
+                        </a>
+
+                    <?php } ?>
                     <a href="./auth/register.php" class="btn btn-success register-btn">
                         Register
                     </a>

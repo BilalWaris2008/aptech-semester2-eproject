@@ -2,7 +2,7 @@
 
     <footer class="footer-section">
 
-        <section class="container">
+        <section class="footer-container">
 
             <section class="row g-5">
 
