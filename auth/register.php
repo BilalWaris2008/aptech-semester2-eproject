@@ -1,5 +1,4 @@
 <?php
-// register.php
 include("../includes/config.php");
 $errors = [];
 $success = "";

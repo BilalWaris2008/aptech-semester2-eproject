@@ -1,5 +1,5 @@
 <?php
-// login.php
+session_start();
 include("../includes/config.php");
 $errors = [];
 $success = "";
@@ -21,15 +21,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors['password'] = "Password is required.";
     }
 
-    // Demo Success
+    // Login User
+
     if (empty($errors)) {
-        $success = "Login Successful!";
+
+        // Check Email
+
+        $check_user = mysqli_query(
+            $connection,
+            "SELECT * FROM users WHERE email='$email'"
+        );
+
+        if (mysqli_num_rows($check_user) > 0) {
+
+            $user = mysqli_fetch_assoc($check_user);
+
+            // Verify Password
+
+            if (password_verify($password, $user['password'])) {
+
+                // Session Create
+
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['user_name'] = $user['fullname'];
+                $_SESSION['user_role'] = $user['role'];
+
+                // Success
+
+                header("Location: ../index.php");
+
+                exit();
+            } else {
+
+                $errors['password'] = "Incorrect password.";
+            }
+        } else {
+
+            $errors['email'] = "Email not found.";
+        }
     }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,93 +81,95 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="./account.css">
 
 </head>
+
 <body>
 
-<div class="login-container">
+    <div class="login-container">
 
-    <div class="login-card">
+        <div class="login-card">
 
-        <div class="logo">
-            <h1>SOUND GROUP</h1>
-            <h2>Welcome Back</h2>
-        </div>
-
-        <?php if($success): ?>
-            <div class="success-msg">
-                <?php echo $success; ?>
+            <div class="logo">
+                <h1>SOUND GROUP</h1>
+                <h2>Welcome Back</h2>
             </div>
-        <?php endif; ?>
 
-        <form method="POST">
+            <?php if ($success): ?>
+                <div class="success-msg">
+                    <?php echo $success; ?>
+                </div>
+            <?php endif; ?>
 
-            <!-- Email -->
-            <div class="mb-3">
+            <form method="POST">
 
-                <label class="form-label">Email</label>
+                <!-- Email -->
+                <div class="mb-3">
 
-                <div class="input-group">
+                    <label class="form-label">Email</label>
 
-                    <span class="input-group-text">
-                        <i class="fa-solid fa-envelope"></i>
-                    </span>
+                    <div class="input-group">
 
-                    <input type="email"
-                           name="email"
-                           class="form-control"
-                           placeholder="Enter your email"
-                           value="<?php echo isset($email) ? htmlspecialchars($email) : ''; ?>">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+
+                        <input type="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="Enter your email"
+                            value="<?php echo isset($email) ? htmlspecialchars($email) : ''; ?>">
+
+                    </div>
+
+                    <?php if (isset($errors['email'])): ?>
+                        <div class="error-text">
+                            <?php echo $errors['email']; ?>
+                        </div>
+                    <?php endif; ?>
 
                 </div>
 
-                <?php if(isset($errors['email'])): ?>
-                    <div class="error-text">
-                        <?php echo $errors['email']; ?>
+                <!-- Password -->
+                <div class="mb-3">
+
+                    <label class="form-label">Password</label>
+
+                    <div class="input-group">
+
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+
+                        <input type="password"
+                            name="password"
+                            class="form-control"
+                            placeholder="Enter your password">
+
                     </div>
-                <?php endif; ?>
 
-            </div>
-
-            <!-- Password -->
-            <div class="mb-3">
-
-                <label class="form-label">Password</label>
-
-                <div class="input-group">
-
-                    <span class="input-group-text">
-                        <i class="fa-solid fa-lock"></i>
-                    </span>
-
-                    <input type="password"
-                           name="password"
-                           class="form-control"
-                           placeholder="Enter your password">
+                    <?php if (isset($errors['password'])): ?>
+                        <div class="error-text">
+                            <?php echo $errors['password']; ?>
+                        </div>
+                    <?php endif; ?>
 
                 </div>
 
-                <?php if(isset($errors['password'])): ?>
-                    <div class="error-text">
-                        <?php echo $errors['password']; ?>
-                    </div>
-                <?php endif; ?>
+                <button type="submit" class="btn-login">
+                    Login
+                </button>
 
+            </form>
+
+            <!-- Static Line -->
+            <div class="register-line">
+                Don't have an account?
+                <a href="register.php">Create Account</a>
             </div>
 
-            <button type="submit" class="btn-login">
-                Login
-            </button>
-
-        </form>
-
-        <!-- Static Line -->
-        <div class="register-line">
-            Don't have an account?
-            <a href="register.php">Create Account</a>
         </div>
 
     </div>
 
-</div>
-
 </body>
+
 </html>
