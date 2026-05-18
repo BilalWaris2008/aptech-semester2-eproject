@@ -37,15 +37,58 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors['confirm_password'] = "Passwords do not match.";
     }
 
-    // Success
+    // Insert User
+
     if (empty($errors)) {
-        $success = "Registration Successful!";
+
+        // Check Email Already Exists
+
+        $check_email = mysqli_query(
+            $connection,
+            "SELECT * FROM users WHERE email='$email'"
+        );
+
+        if (mysqli_num_rows($check_email) > 0) {
+
+            $errors['email'] = "Email already exists.";
+        } else {
+
+            // Hash Password
+            $hashed_password = password_hash(
+                $password,
+                PASSWORD_DEFAULT
+            );
+
+            // Insert Query
+            $insert_query = mysqli_query(
+                $connection,
+                "INSERT INTO users(
+                fullname,
+                email,
+                password
+            )
+
+            VALUES(
+                '$fullname',
+                '$email',
+                '$hashed_password'
+            )"
+
+            );
+
+            if ($insert_query) {
+                $success = "Registration Successful!";
+            } else {
+                $errors['email'] = "Something went wrong.";
+            }
+        }
     }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,132 +105,134 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <link rel="stylesheet" href="./account.css">
 
-  
+
 </head>
+
 <body>
 
-<div class="register-container">
+    <div class="register-container">
 
-    <div class="register-card">
+        <div class="register-card">
 
-        <div class="logo">
-            <h1>SOUND GROUP</h1>
-            <h2>Create Account</h2>
-        </div>
-
-        <?php if($success): ?>
-            <div class="success-msg">
-                <?php echo $success; ?>
+            <div class="logo">
+                <h1>SOUND GROUP</h1>
+                <h2>Create Account</h2>
             </div>
-        <?php endif; ?>
 
-        <form method="POST">
+            <?php if ($success): ?>
+                <div class="success-msg">
+                    <?php echo $success; ?>
+                </div>
+            <?php endif; ?>
 
-            <!-- Full Name -->
-            <div class="mb-3">
-                <label class="form-label">Full Name</label>
+            <form method="POST">
 
-                <div class="input-group">
-                    <span class="input-group-text">
-                        <i class="fa-solid fa-user"></i>
-                    </span>
+                <!-- Full Name -->
+                <div class="mb-3">
+                    <label class="form-label">Full Name</label>
 
-                    <input type="text"
-                           name="fullname"
-                           class="form-control"
-                           placeholder="Enter your full name"
-                           value="<?php echo isset($fullname) ? htmlspecialchars($fullname) : ''; ?>">
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+
+                        <input type="text"
+                            name="fullname"
+                            class="form-control"
+                            placeholder="Enter your full name"
+                            value="<?php echo isset($fullname) ? htmlspecialchars($fullname) : ''; ?>">
+                    </div>
+
+                    <?php if (isset($errors['fullname'])): ?>
+                        <div class="error-text">
+                            <?php echo $errors['fullname']; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
 
-                <?php if(isset($errors['fullname'])): ?>
-                    <div class="error-text">
-                        <?php echo $errors['fullname']; ?>
+                <!-- Email -->
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+
+                        <input type="email"
+                            name="email"
+                            class="form-control"
+                            placeholder="Enter your email"
+                            value="<?php echo isset($email) ? htmlspecialchars($email) : ''; ?>">
                     </div>
-                <?php endif; ?>
-            </div>
 
-            <!-- Email -->
-            <div class="mb-3">
-                <label class="form-label">Email</label>
-
-                <div class="input-group">
-                    <span class="input-group-text">
-                        <i class="fa-solid fa-envelope"></i>
-                    </span>
-
-                    <input type="email"
-                           name="email"
-                           class="form-control"
-                           placeholder="Enter your email"
-                           value="<?php echo isset($email) ? htmlspecialchars($email) : ''; ?>">
+                    <?php if (isset($errors['email'])): ?>
+                        <div class="error-text">
+                            <?php echo $errors['email']; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
 
-                <?php if(isset($errors['email'])): ?>
-                    <div class="error-text">
-                        <?php echo $errors['email']; ?>
+                <!-- Password -->
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+
+                        <input type="password"
+                            name="password"
+                            class="form-control"
+                            placeholder="Enter password">
                     </div>
-                <?php endif; ?>
-            </div>
 
-            <!-- Password -->
-            <div class="mb-3">
-                <label class="form-label">Password</label>
-
-                <div class="input-group">
-                    <span class="input-group-text">
-                        <i class="fa-solid fa-lock"></i>
-                    </span>
-
-                    <input type="password"
-                           name="password"
-                           class="form-control"
-                           placeholder="Enter password">
+                    <?php if (isset($errors['password'])): ?>
+                        <div class="error-text">
+                            <?php echo $errors['password']; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
 
-                <?php if(isset($errors['password'])): ?>
-                    <div class="error-text">
-                        <?php echo $errors['password']; ?>
+                <!-- Confirm Password -->
+                <div class="mb-3">
+                    <label class="form-label">Confirm Password</label>
+
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-key"></i>
+                        </span>
+
+                        <input type="password"
+                            name="confirm_password"
+                            class="form-control"
+                            placeholder="Confirm password">
                     </div>
-                <?php endif; ?>
-            </div>
 
-            <!-- Confirm Password -->
-            <div class="mb-3">
-                <label class="form-label">Confirm Password</label>
-
-                <div class="input-group">
-                    <span class="input-group-text">
-                        <i class="fa-solid fa-key"></i>
-                    </span>
-
-                    <input type="password"
-                           name="confirm_password"
-                           class="form-control"
-                           placeholder="Confirm password">
+                    <?php if (isset($errors['confirm_password'])): ?>
+                        <div class="error-text">
+                            <?php echo $errors['confirm_password']; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
 
-                <?php if(isset($errors['confirm_password'])): ?>
-                    <div class="error-text">
-                        <?php echo $errors['confirm_password']; ?>
-                    </div>
-                <?php endif; ?>
+                <button type="submit" class="btn-register">
+                    Register
+                </button>
+
+            </form>
+
+            <!-- Static Login Line -->
+            <div class="login-line">
+                If you already have an account
+                <a href="login.php">Go to Login</a>
             </div>
 
-            <button type="submit" class="btn-register">
-                Register
-            </button>
-
-        </form>
-
-        <!-- Static Login Line -->
-        <div class="login-line">
-            If you already have an account
-            <a href="login.php">Go to Login</a>
         </div>
 
     </div>
 
-</div>
-
 </body>
+
 </html>
