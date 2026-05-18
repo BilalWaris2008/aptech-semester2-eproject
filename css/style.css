@@ -349,12 +349,15 @@ body {
     background: linear-gradient(135deg, #fc466b, #3f5efb);
 }
 
-
 /* Footer */
 
 .footer-section {
     padding-top: 100px;
     margin-top: 100px;
+}
+
+.footer-container {
+    padding: 0 80px;
 }
 
 .footer-about h2 {
@@ -522,7 +525,6 @@ body {
     .social-icons {
         justify-content: center;
     }
-
 }
 
 @media screen and (max-width: 482px) {
@@ -541,5 +543,4 @@ body {
     .genres-section {
         padding: 100px 10px;
     }
-
 }
