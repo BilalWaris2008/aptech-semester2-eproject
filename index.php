@@ -28,165 +28,66 @@ include("./includes/header.php");
     <section class="container">
 
         <section class="music-title">
-            <h2>Latest Music</h2>
-            <p> Discover newly added songs and trending music</p>
+
+            <h2>
+                Latest Music
+            </h2>
+            <p>
+                Discover newly added songs and trending music
+            </p>
+
         </section>
 
+        <section class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
 
-        <section class="row row-cols-1 row-cols-md-3 row-cols-sm-2 row-cols-lg-5 g-4">
+            <?php
 
-            <!-- music 1 -->
+            $get_music = mysqli_query(
+                $connection,
+                "SELECT * FROM music ORDER BY id DESC LIMIT 5"
+            );
+            while ($music = mysqli_fetch_assoc($get_music)) {
+            ?>
 
-            <section class="col">
+                <section class="col">
 
-                <section class="music-card">
+                    <section class="music-card">
 
-                    <section class="music-img">
-                        <img src="./assets/images/music/musicimg1.png" alt="Song">
-                        <span class="new-badge">
-                            NEW
-                        </span>
-                    </section>
+                        <section class="music-img">
 
-                    <section class="music-content">
+                            <img src="./uploads/images/<?php echo $music['image']; ?>" alt="Music">
+                            <span class="new-badge">
+                                NEW
+                            </span>
 
-                        <h5>Kahani Suno</h5>
-                        <p>Kaifi Khalil</p>
+                        </section>
 
-                        <button class="play-btn">
-                            <i class="bi bi-play-fill"></i>
-                            Play Now
-                        </button>
+                        <section class="music-content">
 
-                    </section>
+                            <h5>
+                                <?php echo $music['title']; ?>
+                            </h5>
+                            <p>
+                                <?php echo $music['artist']; ?>
+                            </p>
 
-                </section>
+                            <button class="play-btn">
+                                <i class="bi bi-play-fill"></i>Play Now
+                            </button>
 
-            </section>
-
-            <!-- music 2 -->
-
-            <section class="col">
-
-                <section class="music-card">
-
-                    <section class="music-img">
-                        <img src="./assets/images/music/musicimg2.png" alt="Song">
-                        <span class="new-badge">
-                            NEW
-                        </span>
-                    </section>
-
-                    <section class="music-content">
-
-                        <h5>Tu Hai Kahan</h5>
-                        <p>AUR</p>
-
-                        <button class="play-btn">
-                            <i class="bi bi-play-fill"></i>
-                            Play Now
-                        </button>
+                        </section>
 
                     </section>
 
                 </section>
 
-            </section>
-
-            <!-- music 3 -->
-
-            <section class="col">
-
-                <section class="music-card">
-
-                    <section class="music-img">
-                        <img src="./assets/images/music/musicimg3.png" alt="Song">
-                        <span class="new-badge">
-                            NEW
-                        </span>
-                    </section>
-
-                    <section class="music-content">
-
-                        <h5>Perfect</h5>
-                        <p>Ed Sheeran</p>
-
-                        <button class="play-btn">
-                            <i class="bi bi-play-fill"></i>
-                            Play Now
-                        </button>
-
-                    </section>
-
-                </section>
-
-            </section>
-
-            <!-- music 4 -->
-
-            <section class="col">
-
-                <section class="music-card">
-
-                    <section class="music-img">
-                        <img src="./assets/images/music/musicimg4.png" alt="Song">
-                        <span class="new-badge">
-                            NEW
-                        </span>
-                    </section>
-
-                    <section class="music-content">
-
-                        <h5>Night Changes</h5>
-                        <p>One Direction</p>
-
-                        <button class="play-btn">
-                            <i class="bi bi-play-fill"></i>
-                            Play Now
-                        </button>
-
-                    </section>
-
-                </section>
-
-            </section>
-
-
-            <!-- music 5 -->
-
-            <section class="col">
-
-                <section class="music-card">
-
-                    <section class="music-img">
-                        <img src="./assets/images/music/musicimg5.png" alt="Song">
-                        <span class="new-badge">
-                            NEW
-                        </span>
-                    </section>
-
-                    <section class="music-content">
-
-                        <h5>Shikayat</h5>
-                        <p>AUR</p>
-
-                        <button class="play-btn">
-                            <i class="bi bi-play-fill"></i>
-                            Play Now
-                        </button>
-
-                    </section>
-
-                </section>
-
-            </section>
+            <?php } ?>
 
         </section>
 
     </section>
 
 </section>
-
 
 
 <!-- Artists Section -->
