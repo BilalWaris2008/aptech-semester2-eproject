@@ -82,7 +82,7 @@ include("./includes/config.php")
 
                     <?php } else { ?>
 
-                        <a href="./auth/login.php" class="btn btn-success">
+                        <a href="./auth/login.php" class="btn btn-outline-light">
                             Login
                         </a>
 

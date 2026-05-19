@@ -2,7 +2,7 @@
 
     <footer class="footer-section">
 
-        <section class="footer-container">
+        <section class="container">
 
             <section class="row g-5">
 
@@ -20,7 +20,7 @@
 
                 </section>
 
-                <section class="col-lg-2 col-md-4 col-sm-4">
+                <section class="col-lg-2 col-md-4 col-sm-6">
 
                     <section class="footer-links">
 
@@ -52,7 +52,7 @@
 
                 <!-- Categories -->
 
-                <section class="col-lg-2 col-md-4 col-sm-4">
+                <section class="col-lg-2 col-md-4 col-sm-6">
 
                     <section class="footer-links">
 
@@ -82,7 +82,7 @@
 
                 </section>
 
-                <section class="col-lg-4 col-md-4 col-sm-4">
+                <section class="col-lg-4 col-md-4">
 
                     <section class="footer-social">
 
