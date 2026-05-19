@@ -10,6 +10,13 @@
     --main-font-family: "Poppins";
 }
 
+/* Selection */
+
+::selection {
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
 /* Scrollbar */
 
 ::-webkit-scrollbar {
@@ -99,9 +106,8 @@ input[type="file"] {
     box-shadow: 0 8px 20px var(--main-color);
 }
 
-::selection {
-    background-color: var(--main-color);
-    color: var(--text-color);
+.error-text {
+    color: red;
 }
 
 /* Media Queries */
