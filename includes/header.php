@@ -3,7 +3,6 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-
 include("./includes/config.php")
 
 ?>
@@ -50,7 +49,7 @@ include("./includes/config.php")
                 <ul class="navbar-nav mx-auto">
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Home</a>
+                        <a href="index.php" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Music</a>
