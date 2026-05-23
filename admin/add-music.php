@@ -131,7 +131,7 @@ if (isset($_POST['submit'])) {
 
         move_uploaded_file(
             $music_tmp,
-            "../uploads/music/" . $music_name
+            "../uploads/videos/" . $music_name
         );
 
         // Insert Query

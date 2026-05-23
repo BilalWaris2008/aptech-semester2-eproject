@@ -110,6 +110,12 @@ input[type="file"] {
     color: red;
 }
 
+.success-msg {
+    color: var(--text-color);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
 /* Media Queries */
 
 @media(max-width:576px) {
