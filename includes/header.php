@@ -23,6 +23,12 @@ include("./includes/config.php")
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- CSS Link -->
     <link rel="stylesheet" href="./css/style.css">
 
@@ -55,13 +61,13 @@ include("./includes/config.php")
                         <a href="#" class="nav-link">Music</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Videos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Artists</a>
+                        <a href="./artist.php" class="nav-link">Artists</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">Albums</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contact.php" class="nav-link">Contact</a>
                     </li>
 
                 </ul>
