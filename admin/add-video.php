@@ -52,38 +52,42 @@ if (isset($_POST['submit'])) {
 
     // Check Image Extension
 
-    if (!in_array($image_extension, $allowed_images)) {
-        $errors['image'] = "Only JPG, PNG & WEBP allowed.";
+    if (!empty($image_name)) {
+        if (!in_array($image_extension, $allowed_images)) {
+            $errors['image'] = "Only JPG, PNG & WEBP allowed.";
+        }
     }
 
-    // Music Data
+    // Video Data
 
-    $music_name = $_FILES['music_file']['name'];
-    $music_tmp = $_FILES['music_file']['tmp_name'];
+    $video_name = $_FILES['video_file']['name'];
+    $video_tmp = $_FILES['video_file']['tmp_name'];
 
-    // Music Extension
+    // Video Extension
 
-    $music_extension = strtolower(
+    $video_extension = strtolower(
         pathinfo(
-            $music_name,
+            $video_name,
             PATHINFO_EXTENSION
         )
     );
 
     // Allowed Extensions
 
-    $allowed_music = ['mp3'];
+    $allowed_video = ['mp4'];
 
-    // Check Extension
+    // Check Video Extension
 
-    if (!in_array($music_extension, $allowed_music)) {
-        $errors['music_file'] = "Only MP3 files are allowed.";
+    if (!empty($video_name)) {
+        if (!in_array($video_extension, $allowed_video)) {
+            $errors['video_file'] = "Only MP4 files are allowed.";
+        }
     }
 
     // Empty Fields Validations
 
     if (empty($title)) {
-        $errors['title'] = "Music title is required.";
+        $errors['title'] = "Video title is required.";
     }
 
     if (empty($artist)) {
@@ -111,11 +115,11 @@ if (isset($_POST['submit'])) {
     }
 
     if (empty($image_name)) {
-        $errors['image'] = "Music image is required.";
+        $errors['image'] = "Video thumbnail is required.";
     }
 
-    if (empty($music_name)) {
-        $errors['music_file'] = "Music file is required.";
+    if (empty($video_name)) {
+        $errors['video_file'] = "Video file is required.";
     }
 
     if (empty($errors)) {
@@ -127,18 +131,18 @@ if (isset($_POST['submit'])) {
             "../uploads/images/" . $image_name
         );
 
-        // Upload Music
+        // Upload Video
 
         move_uploaded_file(
-            $music_tmp,
-            "../uploads/music/" . $music_name
+            $video_tmp,
+            "../uploads/videos/" . $video_name
         );
 
         // Insert Query
 
         $insert = mysqli_query(
             $connection,
-            "INSERT INTO music(
+            "INSERT INTO videos(
                 title,
                 artist,
                 album,
@@ -146,7 +150,7 @@ if (isset($_POST['submit'])) {
                 language,
                 year,
                 image,
-                music_file,
+                video_file,
                 description
             )
 
@@ -158,7 +162,7 @@ if (isset($_POST['submit'])) {
                 '$language',
                 '$year',
                 '$image_name',
-                '$music_name',
+                '$video_name',
                 '$description'
             )"
         );
@@ -166,7 +170,7 @@ if (isset($_POST['submit'])) {
         // Success
 
         if ($insert) {
-            $success = "Music Added Successfully!";
+            $success = "Video Added Successfully!";
         } else {
             $errors['database'] = "Something went wrong.";
         }
@@ -181,7 +185,7 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Music</title>
+    <title>Add Video</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -201,7 +205,7 @@ if (isset($_POST['submit'])) {
 
                 <div class="add-music-card">
 
-                    <h2>Add Music</h2>
+                    <h2>Add Video</h2>
 
                     <!-- Success Message -->
 
@@ -209,7 +213,6 @@ if (isset($_POST['submit'])) {
                         <div class="success-msg">
                             <?php echo $success; ?>
                         </div>
-
                     <?php } ?>
 
                     <form action="" method="POST" enctype="multipart/form-data">
@@ -219,7 +222,7 @@ if (isset($_POST['submit'])) {
                         <div class="mb-3">
 
                             <label class="form-label">
-                                Music Title
+                                Video Title
                             </label>
 
                             <input type="text" name="title" class="form-control" value="<?php echo isset($title) ? htmlspecialchars($title) : ''; ?>">
@@ -322,12 +325,12 @@ if (isset($_POST['submit'])) {
 
                         </div>
 
-                        <!-- Image -->
+                        <!-- Thumbnail -->
 
                         <div class="mb-3">
 
                             <label class="form-label">
-                                Music Image
+                                Video Thumbnail
                             </label>
 
                             <input type="file" name="image" class="form-control">
@@ -340,19 +343,19 @@ if (isset($_POST['submit'])) {
 
                         </div>
 
-                        <!-- Music File -->
+                        <!-- Video File -->
 
                         <div class="mb-3">
 
                             <label class="form-label">
-                                Music File
+                                Video File
                             </label>
 
-                            <input type="file" name="music_file" class="form-control">
+                            <input type="file" name="video_file" class="form-control">
 
-                            <?php if (isset($errors['music_file'])) { ?>
+                            <?php if (isset($errors['video_file'])) { ?>
                                 <div class="error-text">
-                                    <?php echo $errors['music_file']; ?>
+                                    <?php echo $errors['video_file']; ?>
                                 </div>
                             <?php } ?>
 
@@ -379,7 +382,7 @@ if (isset($_POST['submit'])) {
                         </div>
 
                         <button type="submit" name="submit" class="btn-add-music">
-                            Add Music
+                            Add Video
                         </button>
 
                     </form>
