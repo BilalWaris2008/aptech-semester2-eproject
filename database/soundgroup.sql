@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 25, 2026 at 05:24 PM
+-- Generation Time: May 29, 2026 at 03:26 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -77,6 +77,37 @@ INSERT INTO `users` (`id`, `fullname`, `email`, `password`, `role`, `created_at`
 (3, 'Khan', 'khan@gmail.com', '$2y$10$6cYOPnAJZOMgYadcrLtUfuDk.hIPfYZhjFFhc1UTwtIomHkSZAHCC', 'user', '2026-05-19 10:26:09'),
 (4, 'Admin', 'admin123@gmail.com', '$2y$10$XvQbTb37DykMeQJiKemPWO.NJ480ex3iTwRltpszCf9gcZYUVnirm', 'admin', '2026-05-19 10:42:15');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `videos`
+--
+
+CREATE TABLE `videos` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `artist` varchar(255) NOT NULL,
+  `album` varchar(255) NOT NULL,
+  `genre` varchar(100) NOT NULL,
+  `language` varchar(100) NOT NULL,
+  `year` year(4) NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `video_file` varchar(255) NOT NULL,
+  `description` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `videos`
+--
+
+INSERT INTO `videos` (`id`, `title`, `artist`, `album`, `genre`, `language`, `year`, `image`, `video_file`, `description`, `created_at`) VALUES
+(1, 'Shikayat', 'AUR', 'Shikayat', 'Sad Pop', 'Urdu', '2023', 'musicimg5.png', 'Shikayat.mp4', '“Shikayat” is an emotional Urdu song by AUR. The song features heartfelt lyrics, calm music, and a soulful vibe that connects deeply with listeners.', '2026-05-29 13:11:43'),
+(2, 'Night Changes', 'One Direction', 'Four', 'Pop Rock', 'English', '2014', 'musicimg4.png', 'Night Changes.mp4', '“Night Changes” is a popular song by One Direction. The song talks about growing up, memories, and life changes with emotional lyrics and relaxing music.', '2026-05-29 13:16:05'),
+(3, 'Perfect', 'Ed Sheeran', 'Divide', 'Pop', 'English', '2017', 'musicimg3.png', 'perfect.mp4', '“Perfect” is a romantic English song by Ed Sheeran from the album Divide. The song is famous for its emotional lyrics, soft melody, and beautiful love story theme.', '2026-05-29 13:19:07'),
+(4, 'Tu Hai Kahan', 'AUR', 'Tu Hai Kahan', 'Pop', 'Urdu', '2023', 'musicimg2.png', 'Tu Hai Kahan.mp4', '“Tu Hai Kahan” is a popular Urdu song by AUR. The song became viral because of its emotional lyrics, soft vocals, and relaxing music vibe loved by young listeners.', '2026-05-29 13:22:19'),
+(5, 'Kahani Suno', 'Kaifi Khalil', 'Kahani Suno 2.0', 'Sad Pop', 'Urdu', '2021', 'musicimg1.png', 'Kahani Suno.mp4', '“Kahani Suno 2.0” is a soulful Urdu song by Kaifi Khalil. The song expresses emotions of love, heartbreak, and memories through soft vocals and relaxing music.', '2026-05-29 13:24:31');
+
 --
 -- Indexes for dumped tables
 --
@@ -95,6 +126,12 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `email` (`email`);
 
 --
+-- Indexes for table `videos`
+--
+ALTER TABLE `videos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -109,6 +146,12 @@ ALTER TABLE `music`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `videos`
+--
+ALTER TABLE `videos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
