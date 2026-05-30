@@ -48,7 +48,7 @@ body {
 /* Navbar */
 
 .custom-navbar {
-    background: black;
+    background: var(--bg-color);
 }
 
 .custom-navbar .navbar-brand {
@@ -125,6 +125,10 @@ body {
 .btn-success {
     background: var(--main-color);
     border: none;
+}
+
+.btn-success:hover {
+    background-color: var(--btn-hover-color);
 }
 
 /* Latest Music */
