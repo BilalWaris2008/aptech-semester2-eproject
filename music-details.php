@@ -93,6 +93,8 @@ $related_music = mysqli_query(
 
     </section>
 
-</body>
+    <?php
 
-</html>
+    include("./includes/footer.php");
+
+    ?>
