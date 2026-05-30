@@ -40,7 +40,7 @@ include("./includes/config.php")
     <!-- Navbar Start -->
 
     <nav class="navbar navbar-expand-lg navbar-dark py-3 custom-navbar">
-        <section class="container">
+        <section class="container-fluid d-flex">
 
             <a class="navbar-brand" href="#">
                 SOUND GROUP
@@ -72,13 +72,21 @@ include("./includes/config.php")
 
                 </ul>
 
+                <form action="search.php" method="GET" class="d-flex">
+
+                    <input type="text" name="search" class="form-control me-2 w-50 h-50" placeholder="Search">
+                    <button type="submit" class="btn btn-success">
+                        Search
+                    </button>
+
+                </form>
+
                 <section>
                     <?php if (isset($_SESSION['user_id'])) { ?>
 
                         <span class="text-white me-3">
                             Welcome,
                             <?php echo $_SESSION['user_name']; ?>
-
                         </span>
 
                         <a href="auth/logout.php" class="btn btn-success">
@@ -87,7 +95,7 @@ include("./includes/config.php")
 
                     <?php } else { ?>
 
-                        <a href="./auth/login.php" class="btn btn-outline-light">
+                        <a href="./auth/login.php" class="btn btn-outline-light ">
                             Login
                         </a>
 
