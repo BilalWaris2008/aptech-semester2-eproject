@@ -79,9 +79,9 @@ include("./includes/header.php");
                                 <?php echo $music['artist']; ?>
                             </p>
 
-                            <button class="play-btn">
-                                <i class="bi bi-play-fill"></i>Play Now
-                            </button>
+                            <a href="music-details.php?id=<?php echo $music['id']; ?>" class="play-btn">
+                                Play Now
+                            </a>
 
                         </section>
 
