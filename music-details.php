@@ -83,9 +83,51 @@ $related_music = mysqli_query(
                 </h4>
 
                 <audio controls class="w-100">
-                    <source
-                        src="./uploads/music/<?php echo $music['music_file']; ?>">
+                    <source src="./uploads/music/<?php echo $music['music_file']; ?>">
                 </audio>
+
+            </section>
+
+        </section>
+
+
+        <section class="container related-songs">
+
+            <h3 class="mt-5 text-center">
+                Related Songs
+            </h3>
+
+            <section class="row mt-4">
+
+                <?php while ($related = mysqli_fetch_assoc($related_music)) { ?>
+
+                    <section class="col-md-3 mb-4">
+
+                        <section class="related-card">
+
+                            <img src="./uploads/images/<?php echo $related['image']; ?>" class="img-fluid">
+
+                            <section class="related-content">
+
+                                <h6>
+                                    <?php echo $related['title']; ?>
+                                </h6>
+
+                                <p>
+                                    <?php echo $related['artist']; ?>
+                                </p>
+
+                                <a href="music-details.php?id=<?php echo $related['id']; ?>" class="related-btn">
+                                    Play Now
+                                </a>
+
+                            </section>
+
+                        </section>
+
+                    </section>
+
+                <?php } ?>
 
             </section>
 
