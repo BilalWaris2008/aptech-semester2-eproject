@@ -101,7 +101,7 @@ $related_music = mysqli_query(
 
                 <?php while ($related = mysqli_fetch_assoc($related_music)) { ?>
 
-                    <section class="col-md-3 mb-4">
+                    <section class="col-lg-3 col-md-4 col-sm-6 mb-4">
 
                         <section class="related-card">
 
