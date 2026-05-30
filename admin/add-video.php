@@ -197,29 +197,29 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-    <div class="container py-5">
+    <section class="container py-5">
 
-        <div class="row justify-content-center">
+        <section class="row justify-content-center">
 
-            <div class="col-lg-8">
+            <section class="col-lg-8">
 
-                <div class="add-music-card">
+                <section class="add-music-card">
 
                     <h2>Add Video</h2>
 
                     <!-- Success Message -->
 
                     <?php if ($success) { ?>
-                        <div class="success-msg">
+                        <section class="success-msg">
                             <?php echo $success; ?>
-                        </div>
+                        </section>
                     <?php } ?>
 
                     <form action="" method="POST" enctype="multipart/form-data">
 
                         <!-- Title -->
 
-                        <div class="mb-3">
+                        <section class="mb-3">
 
                             <label class="form-label">
                                 Video Title
@@ -228,16 +228,16 @@ if (isset($_POST['submit'])) {
                             <input type="text" name="title" class="form-control" value="<?php echo isset($title) ? htmlspecialchars($title) : ''; ?>">
 
                             <?php if (isset($errors['title'])) { ?>
-                                <div class="error-text">
+                                <section class="error-text">
                                     <?php echo $errors['title']; ?>
-                                </div>
+                                </section>
                             <?php } ?>
 
-                        </div>
+                        </section>
 
                         <!-- Artist -->
 
-                        <div class="mb-3">
+                        <section class="mb-3">
 
                             <label class="form-label">
                                 Artist
@@ -246,16 +246,16 @@ if (isset($_POST['submit'])) {
                             <input type="text" name="artist" class="form-control" value="<?php echo isset($artist) ? htmlspecialchars($artist) : ''; ?>">
 
                             <?php if (isset($errors['artist'])) { ?>
-                                <div class="error-text">
+                                <section class="error-text">
                                     <?php echo $errors['artist']; ?>
-                                </div>
+                                </section>
                             <?php } ?>
 
-                        </div>
+                        </section>
 
                         <!-- Album -->
 
-                        <div class="mb-3">
+                        <section class="mb-3">
 
                             <label class="form-label">
                                 Album
@@ -264,16 +264,16 @@ if (isset($_POST['submit'])) {
                             <input type="text" name="album" class="form-control" value="<?php echo isset($album) ? htmlspecialchars($album) : ''; ?>">
 
                             <?php if (isset($errors['album'])) { ?>
-                                <div class="error-text">
+                                <section class="error-text">
                                     <?php echo $errors['album']; ?>
-                                </div>
+                                </section>
                             <?php } ?>
 
-                        </div>
+                        </section>
 
                         <!-- Genre -->
 
-                        <div class="mb-3">
+                        <section class="mb-3">
 
                             <label class="form-label">
                                 Genre
@@ -282,16 +282,16 @@ if (isset($_POST['submit'])) {
                             <input type="text" name="genre" class="form-control" value="<?php echo isset($genre) ? htmlspecialchars($genre) : ''; ?>">
 
                             <?php if (isset($errors['genre'])) { ?>
-                                <div class="error-text">
+                                <section class="error-text">
                                     <?php echo $errors['genre']; ?>
-                                </div>
+                                </section>
                             <?php } ?>
 
-                        </div>
+                        </section>
 
                         <!-- Language -->
 
-                        <div class="mb-3">
+                        <section class="mb-3">
 
                             <label class="form-label">
                                 Language
@@ -300,16 +300,16 @@ if (isset($_POST['submit'])) {
                             <input type="text" name="language" class="form-control" value="<?php echo isset($language) ? htmlspecialchars($language) : ''; ?>">
 
                             <?php if (isset($errors['language'])) { ?>
-                                <div class="error-text">
+                                <section class="error-text">
                                     <?php echo $errors['language']; ?>
-                                </div>
+                                </section>
                             <?php } ?>
 
-                        </div>
+                        </section>
 
                         <!-- Year -->
 
-                        <div class="mb-3">
+                        <section class="mb-3">
 
                             <label class="form-label">
                                 Year
@@ -318,16 +318,16 @@ if (isset($_POST['submit'])) {
                             <input type="number" name="year" class="form-control" value="<?php echo isset($year) ? htmlspecialchars($year) : ''; ?>">
 
                             <?php if (isset($errors['year'])) { ?>
-                                <div class="error-text">
+                                <section class="error-text">
                                     <?php echo $errors['year']; ?>
-                                </div>
+                                </section>
                             <?php } ?>
 
-                        </div>
+                        </section>
 
                         <!-- Thumbnail -->
 
-                        <div class="mb-3">
+                        <section class="mb-3">
 
                             <label class="form-label">
                                 Video Thumbnail
@@ -336,16 +336,16 @@ if (isset($_POST['submit'])) {
                             <input type="file" name="image" class="form-control">
 
                             <?php if (isset($errors['image'])) { ?>
-                                <div class="error-text">
+                                <section class="error-text">
                                     <?php echo $errors['image']; ?>
-                                </div>
+                                </section>
                             <?php } ?>
 
-                        </div>
+                        </section>
 
                         <!-- Video File -->
 
-                        <div class="mb-3">
+                        <section class="mb-3">
 
                             <label class="form-label">
                                 Video File
@@ -354,16 +354,16 @@ if (isset($_POST['submit'])) {
                             <input type="file" name="video_file" class="form-control">
 
                             <?php if (isset($errors['video_file'])) { ?>
-                                <div class="error-text">
+                                <section class="error-text">
                                     <?php echo $errors['video_file']; ?>
-                                </div>
+                                </section>
                             <?php } ?>
 
-                        </div>
+                        </section>
 
                         <!-- Description -->
 
-                        <div class="mb-3">
+                        <section class="mb-3">
 
                             <label class="form-label">
                                 Description
@@ -374,12 +374,12 @@ if (isset($_POST['submit'])) {
                             </textarea>
 
                             <?php if (isset($errors['description'])) { ?>
-                                <div class="error-text">
+                                <section class="error-text">
                                     <?php echo $errors['description']; ?>
-                                </div>
+                                </section>
                             <?php } ?>
 
-                        </div>
+                        </section>
 
                         <button type="submit" name="submit" class="btn-add-music">
                             Add Video
@@ -387,13 +387,13 @@ if (isset($_POST['submit'])) {
 
                     </form>
 
-                </div>
+                </section>
 
-            </div>
+            </section>
 
-        </div>
+        </section>
 
-    </div>
+    </section>
 
 </body>
 
