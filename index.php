@@ -79,9 +79,9 @@ include("./includes/header.php");
                                 <?php echo $music['artist']; ?>
                             </p>
 
-                            <button class="play-btn">
-                                <i class="bi bi-play-fill"></i>Play Now
-                            </button>
+                            <a href="music-details.php?id=<?php echo $music['id']; ?>" class="play-btn">
+                                Play Now
+                            </a>
 
                         </section>
 
@@ -212,202 +212,75 @@ include("./includes/header.php");
 
 
 <!-- Videos Section  -->
-
 <section class="latest-videos">
 
     <section class="container">
 
         <section class="videos-title">
 
-            <h2>Latest Videos</h2>
-            <p>Watch trending music videos and latest releases</p>
+            <h2>
+                Latest Videos
+            </h2>
+
+            <p>
+                Watch trending music videos and latest releases
+            </p>
 
         </section>
 
-        <section class="row row-cols-1 row-cols-md-3 row-cols-sm-2 row-cols-lg-5 g-4">
+        <section class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
 
-            <!-- Video 1 -->
+            <?php
 
-            <section class="col">
+            $get_videos = mysqli_query(
+                $connection,
+                "SELECT * FROM videos ORDER BY id DESC LIMIT 5"
+            );
+            while ($video = mysqli_fetch_assoc($get_videos)) {
 
-                <section class="video-card">
+            ?>
 
-                    <section class="video-image">
+                <section class="col">
 
-                        <img src="./assets/images/music/musicimg1.png" alt="Video">
+                    <section class="video-card">
 
-                        <section class="video-play-icon">
-                            <i class="bi bi-play-fill"></i>
+                        <section class="video-image">
+
+                            <img
+                                src="./uploads/images/<?php echo $video['image']; ?>"
+                                alt="Video">
+
+                            <section class="video-play-icon">
+                                <i class="bi bi-play-fill"></i>
+                            </section>
+
+                            <span class="new-badge">
+                                NEW
+                            </span>
+
                         </section>
 
-                        <span class="new-badge">
-                            NEW
-                        </span>
+                        <section class="video-content">
 
-                    </section>
+                            <h5>
+                                <?php echo $video['title']; ?>
+                            </h5>
 
-                    <section class="video-content">
+                            <p>
+                                <?php echo $video['artist']; ?>
+                            </p>
 
-                        <h5>Kahani Suno</h5>
-                        <p>Kaifi Khalil</p>
+                            <a href="#" class="watch-btn">
+                                Watch Now
+                            </a>
 
-                        <a href="#" class="watch-btn">
-                            Watch Now
-                        </a>
+                        </section>
 
                     </section>
 
                 </section>
 
-            </section>
-
-            <!-- Video 2 -->
-
-            <section class="col">
-
-                <section class="video-card">
-
-                    <section class="video-image">
-
-                        <img src="./assets/images/music/musicimg2.png" alt="Video">
-
-                        <section class="video-play-icon">
-
-                            <i class="bi bi-play-fill"></i>
-
-                        </section>
-
-                        <span class="new-badge">
-                            NEW
-                        </span>
-
-                    </section>
-
-                    <section class="video-content">
-
-                        <h5>Tu Hai Kahan</h5>
-                        <p>AUR</p>
-
-                        <a href="#" class="watch-btn">
-                            Watch Now
-                        </a>
-
-                    </section>
-
-                </section>
-
-            </section>
-
-            <!-- Video 3 -->
-
-            <section class="col">
-
-                <section class="video-card">
-
-                    <section class="video-image">
-
-                        <img src="./assets/images/music/musicimg3.png" alt="Video">
-
-                        <section class="video-play-icon">
-
-                            <i class="bi bi-play-fill"></i>
-
-                        </section>
-
-                        <span class="new-badge">
-                            NEW
-                        </span>
-
-                    </section>
-
-                    <section class="video-content">
-
-                        <h5>Perfect</h5>
-                        <p>Ed Sheeran</p>
-
-                        <a href="#" class="watch-btn">
-                            Watch Now
-                        </a>
-
-                    </section>
-
-                </section>
-
-            </section>
-
-            <!-- Video 4 -->
-
-            <section class="col">
-
-                <section class="video-card">
-
-                    <section class="video-image">
-
-                        <img src="./assets/images/music/musicimg4.png" alt="Video">
-
-                        <section class="video-play-icon">
-
-                            <i class="bi bi-play-fill"></i>
-
-                        </section>
-
-                        <span class="new-badge">
-                            NEW
-                        </span>
-
-                    </section>
-
-                    <section class="video-content">
-
-                        <h5>Night Changes</h5>
-                        <p>One Direction</p>
-
-                        <a href="#" class="watch-btn">
-                            Watch Now
-                        </a>
-
-                    </section>
-
-                </section>
-
-            </section>
-
-            <!-- Video 5 -->
-
-            <section class="col">
-
-                <section class="video-card">
-
-                    <section class="video-image">
-
-                        <img src="./assets/images/music/musicimg5.png" alt="Video">
-
-                        <section class="video-play-icon">
-
-                            <i class="bi bi-play-fill"></i>
-
-                        </section>
-
-                        <span class="new-badge">
-                            NEW
-                        </span>
-
-                    </section>
-
-                    <section class="video-content">
-
-                        <h5>Shikayat</h5>
-                        <p>AUR</p>
-
-                        <a href="#" class="watch-btn">
-                            Watch Now
-                        </a>
-
-                    </section>
-
-                </section>
-
-            </section>
+            <?php } ?>
 
         </section>
 
