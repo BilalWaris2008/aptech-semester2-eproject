@@ -20,7 +20,6 @@ $related_music = mysqli_query(
      LIMIT 4"
 );
 
-
 ?>
 
 <link rel="stylesheet" href="./music-details.css">
@@ -33,9 +32,7 @@ $related_music = mysqli_query(
 
             <section class="col-md-4">
 
-                <img
-                    src="./uploads/images/<?php echo $music['image']; ?>"
-                    class="img-fluid rounded">
+                <img src="./uploads/images/<?php echo $music['image']; ?>" class="img-fluid rounded">
 
             </section>
 
