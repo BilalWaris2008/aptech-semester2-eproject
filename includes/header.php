@@ -39,8 +39,8 @@ include("./includes/config.php")
 
     <!-- Navbar Start -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark py-3 custom-navbar">
-        <section class="container-fluid d-flex">
+    <nav class="navbar navbar-expand-xl navbar-dark py-3 custom-navbar">
+        <section class="container">
 
             <a class="navbar-brand" href="#">
                 SOUND GROUP
@@ -57,36 +57,40 @@ include("./includes/config.php")
                     <li class="nav-item">
                         <a href="index.php" class="nav-link">Home</a>
                     </li>
+
                     <li class="nav-item">
                         <a href="#" class="nav-link">Music</a>
                     </li>
+
                     <li class="nav-item">
                         <a href="./artist.php" class="nav-link">Artists</a>
                     </li>
+
                     <li class="nav-item">
                         <a href="#" class="nav-link">Albums</a>
                     </li>
+
                     <li class="nav-item">
                         <a href="./contact.php" class="nav-link">Contact</a>
                     </li>
 
                 </ul>
 
-                <form action="search.php" method="GET" class="d-flex">
-
-                    <input type="text" name="search" class="form-control me-2 w-50 h-50" placeholder="Search">
+                <!-- Search Form -->
+                <form action="search.php" method="GET" class="d-flex me-4">
+                    <input type="text" name="search" class="form-control me-2" placeholder="Search">
                     <button type="submit" class="btn btn-success">
                         Search
                     </button>
-
                 </form>
 
-                <section>
+                <!-- User Actions -->
+                <section class="d-flex align-items-center gap-2 user-actions">
+
                     <?php if (isset($_SESSION['user_id'])) { ?>
 
-                        <span class="text-white me-3">
-                            Welcome,
-                            <?php echo $_SESSION['user_name']; ?>
+                        <span class="text-white">
+                            Welcome, <?php echo $_SESSION['user_name']; ?>
                         </span>
 
                         <a href="auth/logout.php" class="btn btn-success">
@@ -95,15 +99,19 @@ include("./includes/config.php")
 
                     <?php } else { ?>
 
-                        <a href="./auth/login.php" class="btn btn-outline-light ">
+                        <a href="./auth/login.php" class="btn btn-outline-light">
                             Login
                         </a>
 
+                        <a href="./auth/register.php" class="btn btn-success">
+                            Register
+                        </a>
+
                     <?php } ?>
-                    <a href="./auth/register.php" class="btn btn-success register-btn">
-                        Register
-                    </a>
+
                 </section>
+
             </section>
+
         </section>
     </nav>
