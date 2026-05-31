@@ -2,7 +2,7 @@
 
 session_start();
 
-// User Login Check
+// Login Check
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../auth/login.php");
@@ -45,63 +45,166 @@ $user_count = mysqli_num_rows(
     )
 );
 
+// Latest Music
+
+$latest_music = mysqli_query(
+    $connection,
+    "SELECT * FROM music
+     ORDER BY id DESC
+     LIMIT 5"
+);
+
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
 
 <body>
 
-<div class="container py-5">
+    <div class="container py-5">
 
-    <div class="row g-4">
+        <div class="dashboard-header">
 
-        <div class="col-md-4">
+            <h1>Welcome Admin</h1>
+            <p>Manage Music, Videos and Users</p>
 
-            <div class="card text-center p-4">
+        </div>
 
-                <h3>
-                    <?php echo $music_count; ?>
-                </h3>
+        <!-- Stats Cards -->
 
-                <p>
-                    Total Music
-                </p>
+        <div class="row g-4 mb-5">
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <h2><?php echo $music_count; ?></h2>
+                    <p>Total Music</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <h2><?php echo $video_count; ?></h2>
+                    <p>Total Videos</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <h2><?php echo $user_count; ?></h2>
+                    <p>Total Users</p>
+
+                </div>
 
             </div>
 
         </div>
 
-        <div class="col-md-4">
+        <!-- Quick Actions -->
 
-            <div class="card text-center p-4">
+        <h3 class="section-title">
+            Quick Actions
+        </h3>
 
-                <h3>
-                    <?php echo $video_count; ?>
-                </h3>
+        <div class="row g-3 mb-5">
 
-                <p>
-                    Total Videos
-                </p>
+            <div class="col-md-3">
+
+                <a href="add-music.php" class="action-btn">
+                    Add Music
+                </a>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <a href="manage-music.php" class="action-btn">
+                    Manage Music
+                </a>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <a href="add-video.php" class="action-btn">
+                    Add Video
+                </a>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <a href="manage-videos.php" class="action-btn">
+                    Manage Videos
+                </a>
 
             </div>
 
         </div>
 
-        <div class="col-md-4">
+        <!-- Latest Music -->
 
-            <div class="card text-center p-4">
+        <h3 class="section-title">
+            Latest Music
+        </h3>
 
-                <h3>
-                    <?php echo $user_count; ?>
-                </h3>
+        <div class="table-responsive">
 
-                <p>
-                    Total Users
-                </p>
+            <table class="table align-middle text-center">
 
-            </div>
+                <thead>
+
+                    <tr>
+
+                        <th>Image</th>
+                        <th>Title</th>
+                        <th>Artist</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <?php while ($music = mysqli_fetch_assoc($latest_music)) { ?>
+
+                        <tr>
+
+                            <td><img src="../uploads/images/<?php echo $music['image']; ?>"></td>
+                            <td><?php echo $music['title']; ?></td>
+                            <td><?php echo $music['artist']; ?></td>
+
+                        </tr>
+
+                    <?php } ?>
+
+                </tbody>
+
+            </table>
 
         </div>
 
     </div>
 
-</div>
+</body>
 
+</html>
