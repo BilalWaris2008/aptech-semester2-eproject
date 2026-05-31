@@ -1,10 +1,12 @@
 <?php
 
 include("./includes/config.php");
+include("./includes/header.php");
 
 $search = "";
 
 if (isset($_GET['search'])) {
+
     $search = mysqli_real_escape_string(
         $connection,
         $_GET['search']
@@ -13,84 +15,89 @@ if (isset($_GET['search'])) {
     $get_music = mysqli_query(
         $connection,
         "SELECT * FROM music
-         WHERE title LIKE '%$search%'
-         OR artist LIKE '%$search%'
-         ORDER BY id DESC"
+        WHERE title LIKE '%$search%'
+        OR artist LIKE '%$search%'
+        ORDER BY id DESC"
     );
 }
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<link rel="stylesheet" href="./css/style.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Results</title>
+<section class="latest-music py-5">
 
-    <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+    <section class="container">
 
-</head>
+        <section class="music-title">
 
-<body>
+            <h2>
+                Search Results
+            </h2>
 
-    <div class="container py-5">
-        <h2 class="mb-4">
-            Search Results For:"<?php echo htmlspecialchars($search); ?>"
-        </h2>
-    </div>
+            <p>
+                Results for: "<?php echo htmlspecialchars($search); ?>"
+            </p>
 
-    <div class="row g-4">
+        </section>
 
-        <?php
+        <section class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
 
-        if (isset($get_music) && mysqli_num_rows($get_music) > 0) {
-            while ($music = mysqli_fetch_assoc($get_music)) {
+            <?php
 
-        ?>
+            if (isset($get_music) && mysqli_num_rows($get_music) > 0) {
+                while ($music = mysqli_fetch_assoc($get_music)) {
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
+            ?>
 
-                    <div class="music-card">
+                    <section class="col">
 
-                        <div class="music-img">
-                            <img src="./uploads/images/<?php echo $music['image']; ?>" class="img-fluid" alt="Music">
-                        </div>
+                        <section class="music-card">
 
-                        <div class="music-content">
+                            <section class="music-img">
 
-                            <h5>
-                                <?php echo $music['title']; ?>
-                            </h5>
+                                <img src="./uploads/images/<?php echo $music['image']; ?>" alt="Song">
 
-                            <p>
-                                <?php echo $music['artist']; ?>
-                            </p>
+                                <span class="new-badge">
+                                    FOUND
+                                </span>
 
-                            <a href="music-details.php?id=<?php echo $music['id']; ?>" class="play-btn">
-                                Play Now
-                            </a>
+                            </section>
 
-                        </div>
+                            <section class="music-content">
 
-                    </div>
+                                <h5>
+                                    <?php echo $music['title']; ?>
+                                </h5>
 
-                </div>
+                                <p>
+                                    <?php echo $music['artist']; ?>
+                                </p>
 
-        <?php
+                                <a href="music-details.php?id=<?php echo $music['id']; ?>" class="play-btn">
+                                    <i class="bi bi-play-fill"></i> Play Now
+                                </a>
 
+                            </section>
+
+                        </section>
+
+                    </section>
+
+            <?php
+
+                }
+
+            } else {
+                echo "<h4 class='text-center text-white'>No music found.</h4>";
             }
-        } else {
-            echo "<h4>No music found.</h4>";
-        }
 
-        ?>
+            ?>
 
-    </div>
+        </section>
 
-</body>
+    </section>
 
-</html>
+</section>
+
+<?php include("./includes/footer.php"); ?>
