@@ -16,24 +16,92 @@ if ($_SESSION['user_role'] != 'admin') {
     exit();
 }
 
+include("../includes/config.php");
+
+// Total Music
+
+$music_count = mysqli_num_rows(
+    mysqli_query(
+        $connection,
+        "SELECT * FROM music"
+    )
+);
+
+// Total Videos
+
+$video_count = mysqli_num_rows(
+    mysqli_query(
+        $connection,
+        "SELECT * FROM videos"
+    )
+);
+
+// Total Users
+
+$user_count = mysqli_num_rows(
+    mysqli_query(
+        $connection,
+        "SELECT * FROM users"
+    )
+);
+
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-
-</head>
 
 <body>
 
-    <h1>
-        Welcome Admin
-    </h1>
+<div class="container py-5">
 
-</body>
+    <div class="row g-4">
 
-</html>
+        <div class="col-md-4">
+
+            <div class="card text-center p-4">
+
+                <h3>
+                    <?php echo $music_count; ?>
+                </h3>
+
+                <p>
+                    Total Music
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card text-center p-4">
+
+                <h3>
+                    <?php echo $video_count; ?>
+                </h3>
+
+                <p>
+                    Total Videos
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card text-center p-4">
+
+                <h3>
+                    <?php echo $user_count; ?>
+                </h3>
+
+                <p>
+                    Total Users
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
