@@ -226,7 +226,6 @@ include("./includes/header.php");
         }
     }
 </style>
-</head>
 
 <body>
 
