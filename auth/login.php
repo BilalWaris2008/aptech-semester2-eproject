@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 // Success
 
-                header("Location: ../index.php");
+                header("Location: ../admin/dashboard.php");
 
                 exit();
             } else {
