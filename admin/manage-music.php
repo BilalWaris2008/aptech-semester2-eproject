@@ -106,7 +106,7 @@ $get_music = mysqli_query(
         }
 
         .table thead th {
-            background: #1DB954;
+            background: var(--main-color);
             color: white;
             border: none;
             padding: 15px;
@@ -133,7 +133,7 @@ $get_music = mysqli_query(
             height: 70px;
             object-fit: cover;
             border-radius: 10px;
-            border: 2px solid #1DB954;
+            border: 2px solid var(--main-color);
         }
 
         .btn-warning {
@@ -159,16 +159,8 @@ $get_music = mysqli_query(
 
         <div class="page-header">
 
-            <h1>
-                Manage Music
-            </h1>
-
-            <a href="add-music.php"
-                class="btn btn-success">
-
-                Add New Music
-
-            </a>
+            <h1>Manage Music</h1>
+            <a href="add-music.php" class="btn btn-success">Add New Music</a>
 
         </div>
 
@@ -179,21 +171,13 @@ $get_music = mysqli_query(
                 <thead>
 
                     <tr>
-
                         <th>ID</th>
-
                         <th>Cover</th>
-
                         <th>Title</th>
-
                         <th>Artist</th>
-
                         <th>Album</th>
-
                         <th>Genre</th>
-
                         <th>Actions</th>
-
                     </tr>
 
                 </thead>
@@ -209,11 +193,7 @@ $get_music = mysqli_query(
                             </td>
 
                             <td>
-
-                                <img
-                                    src="../uploads/images/<?php echo $music['image']; ?>"
-                                    class="music-thumb">
-
+                                <img src="../uploads/images/<?php echo $music['image']; ?>" class="music-thumb">
                             </td>
 
                             <td>
@@ -234,21 +214,12 @@ $get_music = mysqli_query(
 
                             <td>
 
-                                <a
-                                    href="edit-music.php?id=<?php echo $music['id']; ?>"
-                                    class="btn btn-warning btn-sm">
-
+                                <a href="edit-music.php?id=<?php echo $music['id']; ?>" class="btn btn-warning btn-sm">
                                     Edit
-
                                 </a>
 
-                                <a
-                                    href="delete-music.php?id=<?php echo $music['id']; ?>"
-                                    class="btn btn-danger btn-sm"
-                                    onclick="return confirm('Delete this music?')">
-
+                                <a href="delete-music.php?id=<?php echo $music['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this music?')">
                                     Delete
-
                                 </a>
 
                             </td>
