@@ -11,10 +11,7 @@
                     <section class="footer-about">
 
                         <h2>SOUND GROUP</h2>
-                        <p>
-                            Sound Group is an entertainment platform for music and videos.
-                            Discover trending songs, artists, albums and watch the latest videos anytime.
-                        </p>
+                        <p>Sound Group is an entertainment platform for music and videos. Discover trending songs, artists, albums and watch the latest videos anytime.</p>
 
                     </section>
 
@@ -28,21 +25,10 @@
 
                         <ul>
 
-                            <li>
-                                <a href="index.php">Home</a>
-                            </li>
-
-                            <li>
-                                <a href="#">Music</a>
-                            </li>
-
-                            <li>
-                                <a href="#">Videos</a>
-                            </li>
-
-                            <li>
-                                <a href="#">Artists</a>
-                            </li>
+                            <li><a href="/soundgroup">Home</a></li>
+                            <li><a href="#">Music</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">Artists</a></li>
 
                         </ul>
 
@@ -60,21 +46,10 @@
 
                         <ul>
 
-                            <li>
-                                <a href="#">Pop</a>
-                            </li>
-
-                            <li>
-                                <a href="#">Hip Hop</a>
-                            </li>
-
-                            <li>
-                                <a href="#">Rock</a>
-                            </li>
-
-                            <li>
-                                <a href="#">Jazz</a>
-                            </li>
+                            <li><a href="#">Pop</a></li>
+                            <li><a href="#">Hip Hop</a></li>
+                            <li><a href="#">Rock</a></li>
+                            <li><a href="#">Jazz</a></li>
 
                         </ul>
 
