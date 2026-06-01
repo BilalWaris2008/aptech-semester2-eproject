@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 29, 2026 at 03:26 PM
+-- Generation Time: Jun 01, 2026 at 10:34 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -50,7 +50,7 @@ INSERT INTO `music` (`id`, `title`, `artist`, `album`, `genre`, `language`, `yea
 (2, 'Night Changes', 'One Direction', 'Four', 'Pop Rock', 'English', '2014', 'musicimg4.png', 'Night Changes.mp3', '“Night Changes” is a popular song by One Direction. The song talks about growing up, memories, and life changes with emotional lyrics and relaxing music.', '2026-05-25 15:08:32'),
 (3, 'Perfect', 'Ed Sheeran', 'Divide', 'Pop', 'English', '2017', 'musicimg3.png', 'Perfect.mp3', '“Perfect” is a romantic English song by Ed Sheeran from the album Divide. The song is famous for its emotional lyrics, soft melody, and beautiful love story theme.', '2026-05-25 15:15:16'),
 (4, 'Tu Hai Kahan', 'AUR', 'Tu Hai Kahan', 'Pop', 'Urdu', '2023', 'musicimg2.png', 'Tu Hai Kahan.mp3', '“Tu Hai Kahan” is a popular Urdu song by AUR. The song became viral because of its emotional lyrics, soft vocals, and relaxing music vibe loved by young listeners.', '2026-05-25 15:17:10'),
-(5, 'Kahani Suno', 'Kaifi Khalil', 'Kahani Suno 2.0', 'Sad Pop', 'Urdu', '2022', 'musicimg1.png', 'Kahani Suno.mp3', '“Kahani Suno 2.0” is a soulful Urdu song by Kaifi Khalil. The song expresses emotions of love, heartbreak, and memories through soft vocals and relaxing music.', '2026-05-25 15:19:23');
+(5, 'Kahani Suno', 'Kaifi Khalil', 'Kahani Suno 2.0', 'Sad Pop', 'Urdu', '2018', 'musicimg1.png', 'Kahani Suno.mp3', '“Kahani Suno 2.0” is a soulful Urdu song by Kaifi Khalil. The song expresses emotions of love, heartbreak, and memories through soft vocals and relaxing music.', '2026-06-01 19:09:45');
 
 -- --------------------------------------------------------
 
@@ -151,7 +151,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `videos`
 --
 ALTER TABLE `videos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
