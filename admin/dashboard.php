@@ -66,26 +66,17 @@ $latest_music = mysqli_query(
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS Link -->
-    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/sidebar.css">
 </head>
 
 <body>
 
     <div class="admin-wrapper">
 
-        <!-- Sidebar -->
-
-        <?php
-
-        include("./includes/sidebar.php");
-        
-        ?>
-
-        <!-- Main Content -->
+        <?php include("./includes/sidebar.php"); ?>
 
         <div class="main-content">
-
-            <!-- Header -->
 
             <div class="dashboard-header">
 
@@ -93,8 +84,6 @@ $latest_music = mysqli_query(
                 <p>Manage Music, Videos and Users</p>
 
             </div>
-
-            <!-- Statistics -->
 
             <div class="row g-4 mb-5">
 
