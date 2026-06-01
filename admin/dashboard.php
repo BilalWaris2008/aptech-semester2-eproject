@@ -71,135 +71,103 @@ $latest_music = mysqli_query(
 
 <body>
 
-    <div class="container py-5">
+    <div class="admin-wrapper">
 
-        <div class="dashboard-header">
+        <!-- Sidebar -->
 
-            <h1>Welcome Admin</h1>
-            <p>Manage Music, Videos and Users</p>
+        <?php
 
-        </div>
+        include("./includes/sidebar.php");
+        
+        ?>
 
-        <!-- Stats Cards -->
+        <!-- Main Content -->
 
-        <div class="row g-4 mb-5">
+        <div class="main-content">
 
-            <div class="col-md-4">
+            <!-- Header -->
 
-                <div class="dashboard-card">
+            <div class="dashboard-header">
 
-                    <h2><?php echo $music_count; ?></h2>
-                    <p>Total Music</p>
+                <h1>Welcome Admin</h1>
+                <p>Manage Music, Videos and Users</p>
+
+            </div>
+
+            <!-- Statistics -->
+
+            <div class="row g-4 mb-5">
+
+                <div class="col-md-4">
+
+                    <div class="dashboard-card">
+
+                        <h2><?php echo $music_count; ?></h2>
+                        <p>Total Music</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="dashboard-card">
+
+                        <h2><?php echo $video_count; ?></h2>
+                        <p>Total Videos</p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="dashboard-card">
+
+                        <h2><?php echo $user_count; ?></h2>
+                        <p>Total Users</p>
+
+                    </div>
 
                 </div>
 
             </div>
 
-            <div class="col-md-4">
+            <!-- Latest Music -->
 
-                <div class="dashboard-card">
+            <h3 class="section-title">Latest Music</h3>
 
-                    <h2><?php echo $video_count; ?></h2>
-                    <p>Total Videos</p>
+            <div class="table-responsive">
 
-                </div>
+                <table class="table align-middle text-center">
 
-            </div>
-
-            <div class="col-md-4">
-
-                <div class="dashboard-card">
-
-                    <h2><?php echo $user_count; ?></h2>
-                    <p>Total Users</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Quick Actions -->
-
-        <h3 class="section-title">
-            Quick Actions
-        </h3>
-
-        <div class="row g-3 mb-5">
-
-            <div class="col-md-3">
-
-                <a href="add-music.php" class="action-btn">
-                    Add Music
-                </a>
-
-            </div>
-
-            <div class="col-md-3">
-
-                <a href="manage-music.php" class="action-btn">
-                    Manage Music
-                </a>
-
-            </div>
-
-            <div class="col-md-3">
-
-                <a href="add-video.php" class="action-btn">
-                    Add Video
-                </a>
-
-            </div>
-
-            <div class="col-md-3">
-
-                <a href="manage-videos.php" class="action-btn">
-                    Manage Videos
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- Latest Music -->
-
-        <h3 class="section-title">
-            Latest Music
-        </h3>
-
-        <div class="table-responsive">
-
-            <table class="table align-middle text-center">
-
-                <thead>
-
-                    <tr>
-
-                        <th>Image</th>
-                        <th>Title</th>
-                        <th>Artist</th>
-
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    <?php while ($music = mysqli_fetch_assoc($latest_music)) { ?>
+                    <thead>
 
                         <tr>
-
-                            <td><img src="../uploads/images/<?php echo $music['image']; ?>"></td>
-                            <td><?php echo $music['title']; ?></td>
-                            <td><?php echo $music['artist']; ?></td>
-
+                            <th>Image</th>
+                            <th>Title</th>
+                            <th>Artist</th>
                         </tr>
 
-                    <?php } ?>
+                    </thead>
 
-                </tbody>
+                    <tbody>
 
-            </table>
+                        <?php while ($music = mysqli_fetch_assoc($latest_music)) { ?>
+
+                            <tr>
+                                <td><img src="../uploads/images/<?php echo $music['image']; ?>" alt="Music"></td>
+                                <td><?php echo $music['title']; ?></td>
+                                <td><?php echo $music['artist']; ?></td>
+                            </tr>
+
+                        <?php } ?>
+
+                    </tbody>
+
+                </table>
+
+            </div>
 
         </div>
 
