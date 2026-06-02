@@ -7,24 +7,18 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-
 include("./includes/config.php");
 include("./includes/header.php");
 
 ?>
 
-
 <!-- Banner -->
 
 <section class="home-banner">
 
-    <section>
-        <h1>Unlimited Music & Videos</h1>
-    </section>
+    <section><h1>Unlimited Music & Videos</h1></section>
     <p>Latest Songs & Entertainment Anytime</p>
-    <button class="btn btn-success btn-lg mt-3 px-5 explore-btn">
-        Explore Now
-    </button>
+    <button class="btn btn-success btn-lg mt-3 px-5 explore-btn">Explore Now</button>
 
 </section>
 
@@ -37,12 +31,8 @@ include("./includes/header.php");
 
         <section class="music-title">
 
-            <h2>
-                Latest Music
-            </h2>
-            <p>
-                Discover newly added songs and trending music
-            </p>
+            <h2>Latest Music</h2>
+            <p>Discover newly added songs and trending music</p>
 
         </section>
 
@@ -64,24 +54,15 @@ include("./includes/header.php");
                         <section class="music-img">
 
                             <img src="./uploads/images/<?php echo $music['image']; ?>" alt="Music">
-                            <span class="new-badge">
-                                NEW
-                            </span>
+                            <span class="new-badge">NEW</span>
 
                         </section>
 
                         <section class="music-content">
 
-                            <h5>
-                                <?php echo $music['title']; ?>
-                            </h5>
-                            <p>
-                                <?php echo $music['artist']; ?>
-                            </p>
-
-                            <a href="music-details.php?id=<?php echo $music['id']; ?>" class="play-btn">
-                                Play Now
-                            </a>
+                            <h5><?php echo $music['title']; ?></h5>
+                            <p><?php echo $music['artist']; ?></p>
+                            <a href="music-details.php?id=<?php echo $music['id']; ?>" class="play-btn">Play Now</a>
 
                         </section>
 
@@ -120,7 +101,6 @@ include("./includes/header.php");
                 <section class="artist-card">
 
                     <img src="./assets/images/artists/artistimg1.png" alt="Artist">
-
                     <h5>Atif Aslam</h5>
                     <span>Artist</span>
 
@@ -135,7 +115,6 @@ include("./includes/header.php");
                 <section class="artist-card">
 
                     <img src="./assets/images/artists/artistimg2.png" alt="Artist">
-
                     <h5>Arijit Singh</h5>
                     <span>Singer</span>
 
@@ -150,7 +129,6 @@ include("./includes/header.php");
                 <section class="artist-card">
 
                     <img src="./assets/images/artists/artistimg3.png" alt="Artist">
-
                     <h5>One Direction</h5>
                     <span>Pop Artist</span>
 
@@ -165,7 +143,6 @@ include("./includes/header.php");
                 <section class="artist-card">
 
                     <img src="./assets/images/music/musicimg1.png" alt="Artist">
-
                     <h5>Kaifi Khalil</h5>
                     <span>Artist</span>
 
@@ -180,7 +157,6 @@ include("./includes/header.php");
                 <section class="artist-card">
 
                     <img src="./assets/images/artists/artistimg5.png" alt="Artist">
-
                     <h5>AUR</h5>
                     <span>Singer</span>
 
@@ -195,7 +171,6 @@ include("./includes/header.php");
                 <section class="artist-card">
 
                     <img src="./assets/images/artists/artistimg6.png" alt="Artist">
-
                     <h5>Anuv Jain</h5>
                     <span>Artist</span>
 
@@ -218,13 +193,8 @@ include("./includes/header.php");
 
         <section class="videos-title">
 
-            <h2>
-                Latest Videos
-            </h2>
-
-            <p>
-                Watch trending music videos and latest releases
-            </p>
+            <h2>Latest Videos</h2>
+            <p>Watch trending music videos and latest releases</p>
 
         </section>
 
@@ -246,33 +216,23 @@ include("./includes/header.php");
 
                         <section class="video-image">
 
-                            <img
-                                src="./uploads/images/<?php echo $video['image']; ?>"
-                                alt="Video">
+                            <img src="./uploads/images/<?php echo $video['image']; ?>" alt="Video">
 
                             <section class="video-play-icon">
-                                <i class="bi bi-play-fill"></i>
+                                <a href="video-details.php?id=<?php echo $video['id']; ?>">
+                                    <i class="bi bi-play-fill"></i>
+                                </a>
                             </section>
 
-                            <span class="new-badge">
-                                NEW
-                            </span>
+                            <span class="new-badge">NEW</span>
 
                         </section>
 
                         <section class="video-content">
 
-                            <h5>
-                                <?php echo $video['title']; ?>
-                            </h5>
-
-                            <p>
-                                <?php echo $video['artist']; ?>
-                            </p>
-
-                            <a href="#" class="watch-btn">
-                                Watch Now
-                            </a>
+                            <h5><?php echo $video['title']; ?></h5>
+                            <p><?php echo $video['artist']; ?></p>
+                            <a href="video-details.php?id=<?php echo $video['id']; ?>" class="watch-btn">Watch Now</a>
 
                         </section>
 
@@ -309,10 +269,8 @@ include("./includes/header.php");
             <section class="col-lg-3 col-md-6 col-sm-6">
 
                 <section class="genre-card genre-1">
-
                     <h3>Pop</h3>
                     <i class="bi bi-music-note-beamed"></i>
-
                 </section>
 
             </section>
@@ -322,10 +280,8 @@ include("./includes/header.php");
             <section class="col-lg-3 col-md-6 col-sm-6">
 
                 <section class="genre-card genre-2">
-
                     <h3>Hip Hop</h3>
                     <i class="bi bi-headphones"></i>
-
                 </section>
 
             </section>
@@ -335,10 +291,8 @@ include("./includes/header.php");
             <section class="col-lg-3 col-md-6 col-sm-6">
 
                 <section class="genre-card genre-3">
-
                     <h3>Rock</h3>
                     <i class="bi bi-vinyl-fill"></i>
-
                 </section>
 
             </section>
@@ -348,10 +302,8 @@ include("./includes/header.php");
             <section class="col-lg-3 col-md-6 col-sm-6">
 
                 <section class="genre-card genre-4">
-
                     <h3>Jazz</h3>
                     <i class="bi bi-mic-fill"></i>
-
                 </section>
 
             </section>
@@ -361,10 +313,8 @@ include("./includes/header.php");
             <section class="col-lg-3 col-md-6 col-sm-6">
 
                 <section class="genre-card genre-5">
-
                     <h3>English</h3>
                     <i class="bi bi-disc-fill"></i>
-
                 </section>
 
             </section>
@@ -374,10 +324,8 @@ include("./includes/header.php");
             <section class="col-lg-3 col-md-6 col-sm-6">
 
                 <section class="genre-card genre-6">
-
                     <h3>Regional</h3>
                     <i class="bi bi-boombox-fill"></i>
-
                 </section>
 
             </section>
@@ -387,10 +335,8 @@ include("./includes/header.php");
             <section class="col-lg-3 col-md-6 col-sm-6">
 
                 <section class="genre-card genre-7">
-
                     <h3>Classical</h3>
                     <i class="bi bi-music-player-fill"></i>
-
                 </section>
 
             </section>
@@ -400,10 +346,8 @@ include("./includes/header.php");
             <section class="col-lg-3 col-md-6 col-sm-6">
 
                 <section class="genre-card genre-8">
-
                     <h3>Party</h3>
                     <i class="bi bi-speaker-fill"></i>
-
                 </section>
 
             </section>
