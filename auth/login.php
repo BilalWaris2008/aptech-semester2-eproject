@@ -70,105 +70,85 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sound Group Login</title>
-
-    <!-- Bootstrap -->
+    <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome -->
+    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- External CSS -->
+    <!-- CSS Link -->
     <link rel="stylesheet" href="./account.css">
-
 </head>
 
 <body>
 
-    <div class="login-container">
+    <section class="login-container">
 
-        <div class="login-card">
+        <section class="login-card">
 
-            <div class="logo">
+            <section class="logo">
                 <h1>SOUND GROUP</h1>
                 <h2>Welcome Back</h2>
-            </div>
+            </section>
 
             <?php if ($success): ?>
-                <div class="success-msg">
-                    <?php echo $success; ?>
-                </div>
+                <section class="success-msg"><?php echo $success; ?></section>
             <?php endif; ?>
 
             <form method="POST">
 
                 <!-- Email -->
-                <div class="mb-3">
+                <section class="mb-3">
 
                     <label class="form-label">Email</label>
 
-                    <div class="input-group">
+                    <section class="input-group">
 
                         <span class="input-group-text">
                             <i class="fa-solid fa-envelope"></i>
                         </span>
 
-                        <input type="email"
-                            name="email"
-                            class="form-control"
-                            placeholder="Enter your email"
-                            value="<?php echo isset($email) ? htmlspecialchars($email) : ''; ?>">
+                        <input type="email" name="email" class="form-control" placeholder="Enter your email" value="<?php echo isset($email) ? htmlspecialchars($email) : ''; ?>">
 
-                    </div>
+                    </section>
 
                     <?php if (isset($errors['email'])): ?>
-                        <div class="error-text">
-                            <?php echo $errors['email']; ?>
-                        </div>
+                        <section class="error-text"><?php echo $errors['email']; ?></section>
                     <?php endif; ?>
 
-                </div>
+                </section>
 
                 <!-- Password -->
-                <div class="mb-3">
+                <section class="mb-3">
 
                     <label class="form-label">Password</label>
 
-                    <div class="input-group">
+                    <section class="input-group">
 
                         <span class="input-group-text">
                             <i class="fa-solid fa-lock"></i>
                         </span>
 
-                        <input type="password"
-                            name="password"
-                            class="form-control"
-                            placeholder="Enter your password">
+                        <input type="password" name="password" class="form-control" placeholder="Enter your password">
 
-                    </div>
+                    </section>
 
                     <?php if (isset($errors['password'])): ?>
-                        <div class="error-text">
-                            <?php echo $errors['password']; ?>
-                        </div>
+                        <section class="error-text"><?php echo $errors['password']; ?></section>
                     <?php endif; ?>
 
-                </div>
+                </section>
 
-                <button type="submit" class="btn-login">
-                    Login
-                </button>
+                <button type="submit" class="btn-login">Login</button>
 
             </form>
 
             <!-- Static Line -->
-            <div class="register-line">
-                Don't have an account?
+            <section class="register-line">Don't have an account?
                 <a href="register.php">Create Account</a>
-            </div>
+            </section>
 
-        </div>
+        </section>
 
-    </div>
+    </section>
 
 </body>
 

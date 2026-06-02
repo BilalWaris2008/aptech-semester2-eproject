@@ -7,6 +7,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --main-color: #1db954;
+    --sec-color: #ccc;
+    --text-color: #ffffff;
+    --sec-text-color: #aaaaaa;
+    --bg-color: #111111;
+    --btn-hover-color: #18a349;
+    --main-font-family: "Poppins";
+}
+
 body {
     background: linear-gradient(135deg, #121212, #191414);
     min-height: 100vh;
@@ -18,27 +28,27 @@ body {
 
 /* Selection */
 
-::selection{
-    background-color: #1db954;
-    color: #ffffff;
+::selection {
+    background-color: var(--main-color);
+    color: var(--text-color);
 }
 
 /* Scrollbar */
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 10px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background-color: #0f0f0f;
 }
 
-::-webkit-scrollbar-thumb{
-    background-color: #1db954;
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
     border-radius: 30px;
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
     background-color: #18a349;
 }
 
@@ -64,17 +74,17 @@ body {
 }
 
 .logo h1 {
-    color: #1db954;
+    color: var(--main-color);
     font-weight: bolder;
 }
 
 .logo i {
     font-size: 60px;
-    color: #1DB954;
+    color: var(--main-color);
 }
 
 .logo h2 {
-    color: #fff;
+    color: var(--text-color);
     margin-top: 10px;
     font-weight: 600;
 }
@@ -82,7 +92,7 @@ body {
 /* LABEL */
 
 .form-label {
-    color: #fff;
+    color: var(--text-color);
     margin-bottom: 8px;
     font-size: 14px;
 }
@@ -97,20 +107,20 @@ body {
 }
 
 .input-group:focus-within {
-    border-color: #1DB954;
+    border-color: var(--main-color);
     box-shadow: 0 0 12px rgba(29, 185, 84, 0.3);
 }
 
 .input-group-text {
     background: #282828;
     border: none;
-    color: #1DB954;
+    color: var(--main-color);
 }
 
 .form-control {
     background: #282828 !important;
     border: none !important;
-    color: #fff !important;
+    color: var(--text-color) !important;
     height: 50px;
 }
 
@@ -119,7 +129,7 @@ body {
 }
 
 .form-control::placeholder {
-    color: #aaa;
+    color: var(--sec-color);
 }
 
 /* BUTTON */
@@ -130,8 +140,8 @@ body {
     height: 50px;
     border: none;
     border-radius: 50px;
-    background: #1DB954;
-    color: #fff;
+    background: var(--main-color);
+    color: var(--text-color);
     font-weight: 600;
     margin-top: 10px;
     transition: 0.3s;
@@ -139,12 +149,12 @@ body {
 
 .btn-login:hover,
 .btn-register:hover {
-    background: #1ed760;
+    background: var(--btn-hover-color);
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(29, 185, 84, 0.35);
 }
 
-/* ERROR */
+/* Error */
 
 .error-text {
     color: #ff4d4d;
@@ -153,18 +163,16 @@ body {
     padding-left: 5px;
 }
 
-/* SUCCESS */
+/* Seccess */
 
 .success-msg {
-    background: #1DB954;
-    color: #fff;
+    background: var(--main-color);
+    color: var(--text-color);
     padding: 12px;
     border-radius: 10px;
     text-align: center;
     margin-bottom: 20px;
 }
-
-/* BOTTOM TEXT */
 
 .register-line,
 .login-line {
@@ -176,7 +184,7 @@ body {
 
 .register-line a,
 .login-line a {
-    color: #1DB954;
+    color: var(--main-color);
     text-decoration: none;
     font-weight: 500;
 }
@@ -186,7 +194,7 @@ body {
     text-decoration: underline;
 }
 
-/* ANIMATION */
+/* Animation */
 
 @keyframes fadeIn {
 
@@ -201,7 +209,7 @@ body {
     }
 }
 
-/* MOBILE */
+/* Media Queries */
 
 @media(max-width:576px) {
 
