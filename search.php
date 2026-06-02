@@ -31,13 +31,8 @@ if (isset($_GET['search'])) {
 
         <section class="music-title">
 
-            <h2>
-                Search Results
-            </h2>
-
-            <p>
-                Results for: "<?php echo htmlspecialchars($search); ?>"
-            </p>
+            <h2>Search Results</h2>
+            <p>Results for: "<?php echo htmlspecialchars($search); ?>"</p>
 
         </section>
 
@@ -57,25 +52,16 @@ if (isset($_GET['search'])) {
                             <section class="music-img">
 
                                 <img src="./uploads/images/<?php echo $music['image']; ?>" alt="Song">
-
-                                <span class="new-badge">
-                                    FOUND
-                                </span>
+                                <span class="new-badge">FOUND</span>
 
                             </section>
 
                             <section class="music-content">
 
-                                <h5>
-                                    <?php echo $music['title']; ?>
-                                </h5>
-
-                                <p>
-                                    <?php echo $music['artist']; ?>
-                                </p>
-
+                                <h5><?php echo $music['title']; ?></h5>
+                                <p><?php echo $music['artist']; ?></p>
                                 <a href="music-details.php?id=<?php echo $music['id']; ?>" class="play-btn">
-                                    <i class="bi bi-play-fill"></i> Play Now
+                                    <i class="bi bi-play-fill"></i>Play Now
                                 </a>
 
                             </section>
