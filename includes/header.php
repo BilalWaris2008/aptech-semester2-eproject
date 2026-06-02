@@ -42,9 +42,7 @@ include("./includes/config.php");
     <nav class="navbar navbar-expand-xl navbar-dark py-3 custom-navbar">
         <section class="container">
 
-            <a class="navbar-brand" href="#">
-                SOUND GROUP
-            </a>
+            <a class="navbar-brand" href="#">SOUND GROUP</a>
 
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
                 <span class="navbar-toggler-icon"></span>
@@ -79,9 +77,7 @@ include("./includes/config.php");
                 <!-- Search Form -->
                 <form action="search.php" method="GET" class="d-flex me-4">
                     <input type="text" name="search" class="form-control me-2" placeholder="Search">
-                    <button type="submit" class="btn btn-success">
-                        Search
-                    </button>
+                    <button type="submit" class="btn btn-success">Search</button>
                 </form>
 
                 <!-- User Actions -->
@@ -89,23 +85,13 @@ include("./includes/config.php");
 
                     <?php if (isset($_SESSION['user_id'])) { ?>
 
-                        <span class="text-white">
-                            Welcome, <?php echo $_SESSION['user_name']; ?>
-                        </span>
-
-                        <a href="auth/logout.php" class="btn btn-success">
-                            Logout
-                        </a>
+                        <span class="text-white">Welcome, <?php echo $_SESSION['user_name']; ?></span>
+                        <a href="auth/logout.php" class="btn btn-success">Logout</a>
 
                     <?php } else { ?>
 
-                        <a href="./auth/login.php" class="btn btn-outline-light">
-                            Login
-                        </a>
-
-                        <a href="./auth/register.php" class="btn btn-success">
-                            Register
-                        </a>
+                        <a href="./auth/login.php" class="btn btn-outline-light">Login</a>
+                        <a href="./auth/register.php" class="btn btn-success">Register</a>
 
                     <?php } ?>
 

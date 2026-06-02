@@ -22,14 +22,11 @@
                     <section class="footer-links">
 
                         <h4>Quick Links</h4>
-
                         <ul>
-
                             <li><a href="/soundgroup">Home</a></li>
                             <li><a href="#">Music</a></li>
                             <li><a href="#">Videos</a></li>
                             <li><a href="#">Artists</a></li>
-
                         </ul>
 
                     </section>
@@ -43,14 +40,11 @@
                     <section class="footer-links">
 
                         <h4>Genres</h4>
-
                         <ul>
-
                             <li><a href="#">Pop</a></li>
                             <li><a href="#">Hip Hop</a></li>
                             <li><a href="#">Rock</a></li>
                             <li><a href="#">Jazz</a></li>
-
                         </ul>
 
                     </section>
