@@ -22,62 +22,34 @@ $related_music = mysqli_query(
 
 ?>
 
-<link rel="stylesheet" href="./music-details.css">
+<link rel="stylesheet" href="./css/music-details.css">
 
 <body>
 
     <section class="container py-5">
 
-        <section class="row">
+        <section class="row py-5">
 
             <section class="col-md-4">
-
                 <img src="./uploads/images/<?php echo $music['image']; ?>" class="img-fluid rounded">
-
             </section>
 
             <section class="col-md-8">
 
-                <h1>
-                    <?php echo $music['title']; ?>
-                </h1>
-
-                <h5>
-                    <?php echo $music['artist']; ?>
-                </h5>
+                <h1><?php echo $music['title']; ?></h1>
+                <h5><?php echo $music['artist']; ?></h5>
 
                 <section class="music-meta">
 
-                    <span>
-                        Album:
-                        <?php echo $music['album']; ?>
-                    </span>
-
-                    <span>
-                        Genre:
-                        <?php echo $music['genre']; ?>
-                    </span>
-
-                    <span>
-                        Year:
-                        <?php echo $music['year']; ?>
-                    </span>
-
-                    <span>
-                        Language:
-                        <?php echo $music['language']; ?>
-                    </span>
+                    <span>Album: <?php echo $music['album']; ?></span>
+                    <span>Genre: <?php echo $music['genre']; ?></span>
+                    <span>Year: <?php echo $music['year']; ?></span>
+                    <span>Language: <?php echo $music['language']; ?></span>
 
                 </section>
 
-                <p>
-                    <?php echo $music['description']; ?>
-                </p>
-
-
-                <h4 class="mt-4 mb-3">
-                    Listen Now
-                </h4>
+                <p><?php echo $music['description']; ?></p>
+                <h4 class="mt-4 mb-3">Listen Now</h4>
 
                 <audio controls class="w-100">
                     <source src="./uploads/music/<?php echo $music['music_file']; ?>">
@@ -90,9 +62,7 @@ $related_music = mysqli_query(
 
         <section class="container related-songs">
 
-            <h3 class="mt-5 text-center">
-                Related Songs
-            </h3>
+            <h3 class="text-center">Related Songs</h3>
 
             <section class="row mt-4">
 
@@ -106,17 +76,9 @@ $related_music = mysqli_query(
 
                             <section class="related-content">
 
-                                <h6>
-                                    <?php echo $related['title']; ?>
-                                </h6>
-
-                                <p>
-                                    <?php echo $related['artist']; ?>
-                                </p>
-
-                                <a href="music-details.php?id=<?php echo $related['id']; ?>" class="related-btn">
-                                    Play Now
-                                </a>
+                                <h6><?php echo $related['title']; ?></h6>
+                                <p><?php echo $related['artist']; ?></p>
+                                <a href="music-details.php?id=<?php echo $related['id']; ?>" class="related-btn">Play Now</a>
 
                             </section>
 
