@@ -57,6 +57,11 @@ body {
     font-weight: 700;
 }
 
+.manage-msg h1 {
+    color: var(--main-color);
+    font-weight: 700;
+}
+
 .add-music-btn {
     background-color: var(--main-color);
     color: var(--text-color);
@@ -153,5 +158,4 @@ body {
         flex-direction: column;
         gap: 15px;
     }
-
 }

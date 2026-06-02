@@ -98,7 +98,6 @@ if (isset($_POST['update'])) {
         $connection,
         "SELECT * FROM music WHERE id='$id'"
     );
-
     $music = mysqli_fetch_assoc($get_music);
 }
 
@@ -115,112 +114,89 @@ if (isset($_POST['update'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS Links -->
      <link rel="stylesheet" href="../css/edit.css">
-
 </head>
 
-<div class="container py-5">
+<section class="container py-5">
 
-    <div class="row justify-content-center">
+    <section class="row justify-content-center">
 
-        <div class="col-lg-8">
+        <section class="col-lg-8">
 
-            <div class="edit-card">
+            <section class="edit-card">
 
                 <h2 class="edit-title">Edit Music</h2>
 
                 <?php if ($success) { ?>
 
-                    <div class="alert alert-success">
-                        <?php echo $success; ?>
-                    </div>
+                    <section class="alert alert-success"><?php echo $success; ?></section>
 
                 <?php } ?>
 
                 <form method="POST" enctype="multipart/form-data">
 
-                    <div class="mb-3">
-
+                    <section class="mb-3">
                         <label class="form-label">Title</label>
                         <input type="text" name="title" class="form-control" value="<?php echo $music['title']; ?>">
+                    </section>
 
-                    </div>
-
-                    <div class="mb-3">
-
+                    <section class="mb-3">
                         <label class="form-label">Artist</label>
                         <input type="text" name="artist" class="form-control" value="<?php echo $music['artist']; ?>">
+                    </section>
 
-                    </div>
-
-                    <div class="mb-3">
-
+                    <section class="mb-3">
                         <label class="form-label">Album</label>
                         <input type="text" name="album" class="form-control" value="<?php echo $music['album']; ?>">
+                    </section>
 
-                    </div>
-
-                    <div class="mb-3">
-
+                    <section class="mb-3">
                         <label class="form-label">Genre</label>
                         <input type="text" name="genre" class="form-control" value="<?php echo $music['genre']; ?>">
+                    </section>
 
-                    </div>
-
-                    <div class="mb-3">
-
+                    <section class="mb-3">
                         <label class="form-label"> Language</label>
                         <input type="text" name="language" class="form-control" value="<?php echo $music['language']; ?>">
+                    </section>
 
-                    </div>
-
-                    <div class="mb-3">
-
+                    <section class="mb-3">
                         <label class="form-label">Year</label>
                         <input type="number" name="year" class="form-control" value="<?php echo $music['year']; ?>">
+                    </section>
 
-                    </div>
-
-                    <div class="mb-3">
-
+                    <section class="mb-3">
                         <label class="form-label">Current Image</label>
                         <br>
                         <img src="../../uploads/images/<?php echo $music['image']; ?>" class="current-image">
+                    </section>
 
-                    </div>
-
-                    <div class="mb-3">
-
+                    <section class="mb-3">
                         <label class="form-label">Change Image</label>
                         <input type="file" name="image" class="form-control">
+                    </section>
 
-                    </div>
-
-                    <div class="mb-3">
-
+                    <section class="mb-3">
                         <label class="form-label">Change Music File</label>
                         <input type="file" name="music_file" class="form-control">
+                    </section>
 
-                    </div>
-
-                    <div class="mb-3">
-
+                    <section class="mb-3">
                         <label class="form-label">Description</label>
                         <textarea name="description" rows="5" class="form-control"><?php echo $music['description']; ?></textarea>
-
-                    </div>
+                    </section>
 
                     <button type="submit" name="update" class="btn-update">Update Music</button>
                     <a href="manage-music.php" class="btn-back">Back</a>
 
                 </form>
 
-            </div>
+            </section>
 
-        </div>
+        </section>
 
-    </div>
+    </section>
 
-</div>
+</section>
 
 </body>
 

@@ -37,27 +37,26 @@ $get_music = mysqli_query(
     <!-- CSS Link -->
     <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="stylesheet" href="../css/manage.css">
-
 </head>
 
 <body>
 
-    <div class="admin-wrapper">
+    <section class="admin-wrapper">
 
         <?php include("../includes/sidebar.php"); ?>
 
-        <div class="main-content">
+        <section class="main-content">
 
-            <div class="container-fluid py-4">
+            <section class="container-fluid py-4">
 
-                <div class="page-header d-flex justify-content-between align-items-center mb-4">
+                <section class="page-header d-flex justify-content-between align-items-center mb-4">
 
                     <h1>Manage Music</h1>
                     <a href="add-music.php" class="btn add-music-btn">Add New Music</a>
 
-                </div>
+                </section>
 
-                <div class="table-responsive">
+                <section class="table-responsive">
 
                     <table class="table align-middle text-center">
 
@@ -81,40 +80,19 @@ $get_music = mysqli_query(
 
                                 <tr>
 
-                                    <td>
-                                        <?php echo $music['id']; ?>
-                                    </td>
-
+                                    <td><?php echo $music['id']; ?></td>
                                     <td>
                                         <img src="../../uploads/images/<?php echo $music['image']; ?>" class="music-thumb">
                                     </td>
 
-                                    <td>
-                                        <?php echo $music['title']; ?>
-                                    </td>
+                                    <td><?php echo $music['title']; ?></td>
+                                    <td><?php echo $music['artist']; ?></td>
+                                    <td><?php echo $music['album']; ?></td>
+                                    <td><?php echo $music['genre']; ?></td>
 
                                     <td>
-                                        <?php echo $music['artist']; ?>
-                                    </td>
-
-                                    <td>
-                                        <?php echo $music['album']; ?>
-                                    </td>
-
-                                    <td>
-                                        <?php echo $music['genre']; ?>
-                                    </td>
-
-                                    <td>
-
-                                        <a href="edit-music.php?id=<?php echo $music['id']; ?>" class="btn btn-sm edit">
-                                            Edit
-                                        </a>
-
-                                        <a href="delete-music.php?id=<?php echo $music['id']; ?>" class="btn btn-sm delete" onclick="return confirm('Are you sure you want to delete this music?')">
-                                            Delete
-                                        </a>
-
+                                        <a href="edit-music.php?id=<?php echo $music['id']; ?>" class="btn btn-sm edit">Edit</a>
+                                        <a href="delete-music.php?id=<?php echo $music['id']; ?>" class="btn btn-sm delete" onclick="return confirm('Are you sure you want to delete this music?')">Delete</a>
                                     </td>
 
                                 </tr>
@@ -125,13 +103,13 @@ $get_music = mysqli_query(
 
                     </table>
 
-                </div>
+                </section>
 
-            </div>
+            </section>
 
-        </div>
+        </section>
 
-    </div>
+    </section>
 
 </body>
 

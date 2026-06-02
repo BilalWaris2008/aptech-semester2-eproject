@@ -109,96 +109,91 @@ if (isset($_POST['update'])) {
 
 <body>
 
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
+    <section class="container py-5">
+        <section class="row justify-content-center">
+            <section class="col-lg-8">
 
-                <div class="edit-card">
+                <section class="edit-card">
 
                     <h2 class="edit-title">Edit Video</h2>
 
                     <?php if ($success) { ?>
-                        <div class="alert alert-success">
+                        <section class="alert alert-success">
                             <?php echo $success; ?>
-                        </div>
+                        </section>
                     <?php } ?>
 
                     <form method="POST" enctype="multipart/form-data">
 
-                        <div class="mb-3">
+                        <section class="mb-3">
                             <label class="form-label">Title</label>
-                            <input type="text" name="title" class="form-control"
-                                value="<?php echo $video['title']; ?>">
-                        </div>
+                            <input type="text" name="title" class="form-control" value="<?php echo $video['title']; ?>">
+                        </section>
 
-                        <div class="mb-3">
+                        <section class="mb-3">
                             <label class="form-label">Artist</label>
-                            <input type="text" name="artist" class="form-control"
-                                value="<?php echo $video['artist']; ?>">
-                        </div>
+                            <input type="text" name="artist" class="form-control" value="<?php echo $video['artist']; ?>">
+                        </section>
 
-                        <div class="mb-3">
+                        <section class="mb-3">
                             <label class="form-label">Album</label>
-                            <input type="text" name="album" class="form-control"
-                                value="<?php echo $video['album']; ?>">
-                        </div>
+                            <input type="text" name="album" class="form-control" value="<?php echo $video['album']; ?>">
+                        </section>
 
-                        <div class="mb-3">
+                        <section class="mb-3">
                             <label class="form-label">Genre</label>
-                            <input type="text" name="genre" class="form-control"
-                                value="<?php echo $video['genre']; ?>">
-                        </div>
+                            <input type="text" name="genre" class="form-control" value="<?php echo $video['genre']; ?>">
+                        </section>
 
-                        <div class="mb-3">
+                        <section class="mb-3">
                             <label class="form-label">Language</label>
-                            <input type="text" name="language" class="form-control"
-                                value="<?php echo $video['language']; ?>">
-                        </div>
+                            <input type="text" name="language" class="form-control" value="<?php echo $video['language']; ?>">
+                        </section>
 
-                        <div class="mb-3">
+                        <section class="mb-3">
                             <label class="form-label">Year</label>
-                            <input type="number" name="year" class="form-control"
-                                value="<?php echo $video['year']; ?>">
-                        </div>
+                            <input type="number" name="year" class="form-control" value="<?php echo $video['year']; ?>">
+                        </section>
 
-                        <div class="mb-3">
+                        <section class="mb-3">
                             <label class="form-label">Current Image</label><br>
-                            <img src="../../uploads/images/<?php echo $video['image']; ?>"
-                                class="current-image">
-                        </div>
+                            <img src="../../uploads/images/<?php echo $video['image']; ?>" class="current-image">
+                        </section>
 
-                        <div class="mb-3">
+                        <section class="mb-3">
                             <label class="form-label">Change Image</label>
                             <input type="file" name="image" class="form-control">
-                        </div>
+                        </section>
 
-                        <div class="mb-3">
+                        <section class="mb-3">
                             <label class="form-label">Current Video File</label><br>
                             <video width="200" controls>
                                 <source src="../../uploads/videos/<?php echo $video['video_file']; ?>">
                             </video>
-                        </div>
+                        </section>
 
-                        <div class="mb-3">
+                        <section class="mb-3">
                             <label class="form-label">Change Video</label>
                             <input type="file" name="video_file" class="form-control">
-                        </div>
+                        </section>
 
-                        <div class="mb-3">
+                        <section class="mb-3">
                             <label class="form-label">Description</label>
                             <textarea name="description" rows="5" class="form-control"><?php echo $video['description']; ?></textarea>
-                        </div>
+                        </section>
 
                         <button type="submit" name="update" class="btn-update">Update Video</button>
                         <a href="manage-videos.php" class="btn-back">Back</a>
 
                     </form>
 
-                </div>
+                </section>
 
-            </div>
-        </div>
-    </div>
+            </section>
+
+        </section>
+        
+    </section>
 
 </body>
 

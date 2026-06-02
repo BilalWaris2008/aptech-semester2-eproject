@@ -72,72 +72,64 @@ $latest_music = mysqli_query(
 
 <body>
 
-    <div class="admin-wrapper">
+    <section class="admin-wrapper">
 
         <?php include("./includes/sidebar.php"); ?>
 
-        <div class="main-content">
+        <section class="main-content">
 
-            <div class="dashboard-header">
+            <section class="dashboard-header">
 
                 <h1>Welcome Admin</h1>
                 <p>Manage Music, Videos and Users</p>
 
-            </div>
+            </section>
 
-            <div class="row g-4 mb-5">
+            <section class="row g-4 mb-5">
 
-                <div class="col-md-4">
+                <section class="col-md-4">
 
-                    <div class="dashboard-card">
-
+                    <section class="dashboard-card">
                         <h2><?php echo $music_count; ?></h2>
                         <p>Total Music</p>
+                    </section>
 
-                    </div>
+                </section>
 
-                </div>
+                <section class="col-md-4">
 
-                <div class="col-md-4">
-
-                    <div class="dashboard-card">
-
+                    <section class="dashboard-card">
                         <h2><?php echo $video_count; ?></h2>
                         <p>Total Videos</p>
+                    </section>
 
-                    </div>
+                </section>
 
-                </div>
+                <section class="col-md-4">
 
-                <div class="col-md-4">
-
-                    <div class="dashboard-card">
-
+                    <section class="dashboard-card">
                         <h2><?php echo $user_count; ?></h2>
                         <p>Total Users</p>
+                    </section>
 
-                    </div>
+                </section>
 
-                </div>
-
-            </div>
+            </section>
 
             <!-- Latest Music -->
 
             <h3 class="section-title">Latest Music</h3>
 
-            <div class="table-responsive">
+            <section class="table-responsive">
 
                 <table class="table align-middle text-center">
 
                     <thead>
-
                         <tr>
                             <th>Image</th>
                             <th>Title</th>
                             <th>Artist</th>
                         </tr>
-
                     </thead>
 
                     <tbody>
@@ -156,11 +148,11 @@ $latest_music = mysqli_query(
 
                 </table>
 
-            </div>
+            </section>
 
-        </div>
+        </section>
 
-    </div>
+    </section>
 
 </body>
 

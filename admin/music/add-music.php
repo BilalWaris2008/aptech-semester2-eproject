@@ -191,11 +191,11 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-    <div class="admin-wrapper">
+    <section class="admin-wrapper">
 
         <?php include("../includes/sidebar.php"); ?>
 
-        <div class="main-content">
+        <section class="main-content">
 
             <section class="container-fluid py-4">
 
@@ -208,9 +208,7 @@ if (isset($_POST['submit'])) {
                             <h2>Add Music</h2>
 
                             <?php if ($success) { ?>
-                                <section class="success-msg">
-                                    <?php echo $success; ?>
-                                </section>
+                                <section class="success-msg"><?php echo $success; ?></section>
                             <?php } ?>
 
                             <form action="" method="POST" enctype="multipart/form-data">
@@ -223,9 +221,7 @@ if (isset($_POST['submit'])) {
                                     <input type="text" name="title" class="form-control" value="<?php echo isset($title) ? htmlspecialchars($title) : ''; ?>">
 
                                     <?php if (isset($errors['title'])) { ?>
-                                        <section class="error-text">
-                                            <?php echo $errors['title']; ?>
-                                        </section>
+                                        <section class="error-text"><?php echo $errors['title']; ?></section>
                                     <?php } ?>
 
                                 </section>
@@ -238,9 +234,7 @@ if (isset($_POST['submit'])) {
                                     <input type="text" name="artist" class="form-control" value="<?php echo isset($artist) ? htmlspecialchars($artist) : ''; ?>">
 
                                     <?php if (isset($errors['artist'])) { ?>
-                                        <section class="error-text">
-                                            <?php echo $errors['artist']; ?>
-                                        </section>
+                                        <section class="error-text"><?php echo $errors['artist']; ?></section>
                                     <?php } ?>
 
                                 </section>
@@ -253,9 +247,7 @@ if (isset($_POST['submit'])) {
                                     <input type="text" name="album" class="form-control" value="<?php echo isset($album) ? htmlspecialchars($album) : ''; ?>">
 
                                     <?php if (isset($errors['album'])) { ?>
-                                        <section class="error-text">
-                                            <?php echo $errors['album']; ?>
-                                        </section>
+                                        <section class="error-text"><?php echo $errors['album']; ?></section>
                                     <?php } ?>
 
                                 </section>
@@ -268,9 +260,7 @@ if (isset($_POST['submit'])) {
                                     <input type="text" name="genre" class="form-control" value="<?php echo isset($genre) ? htmlspecialchars($genre) : ''; ?>">
 
                                     <?php if (isset($errors['genre'])) { ?>
-                                        <section class="error-text">
-                                            <?php echo $errors['genre']; ?>
-                                        </section>
+                                        <section class="error-text"><?php echo $errors['genre']; ?></section>
                                     <?php } ?>
 
                                 </section>
@@ -283,9 +273,7 @@ if (isset($_POST['submit'])) {
                                     <input type="text" name="language" class="form-control" value="<?php echo isset($language) ? htmlspecialchars($language) : ''; ?>">
 
                                     <?php if (isset($errors['language'])) { ?>
-                                        <section class="error-text">
-                                            <?php echo $errors['language']; ?>
-                                        </section>
+                                        <section class="error-text"><?php echo $errors['language']; ?></section>
                                     <?php } ?>
 
                                 </section>
@@ -298,9 +286,7 @@ if (isset($_POST['submit'])) {
                                     <input type="number" name="year" class="form-control" value="<?php echo isset($year) ? htmlspecialchars($year) : ''; ?>">
 
                                     <?php if (isset($errors['year'])) { ?>
-                                        <section class="error-text">
-                                            <?php echo $errors['year']; ?>
-                                        </section>
+                                        <section class="error-text"><?php echo $errors['year']; ?></section>
                                     <?php } ?>
 
                                 </section>
@@ -313,9 +299,7 @@ if (isset($_POST['submit'])) {
                                     <input type="file" name="image" class="form-control">
 
                                     <?php if (isset($errors['image'])) { ?>
-                                        <section class="error-text">
-                                            <?php echo $errors['image']; ?>
-                                        </section>
+                                        <section class="error-text"><?php echo $errors['image']; ?></section>
                                     <?php } ?>
 
                                 </section>
@@ -328,9 +312,7 @@ if (isset($_POST['submit'])) {
                                     <input type="file" name="music_file" class="form-control">
 
                                     <?php if (isset($errors['music_file'])) { ?>
-                                        <section class="error-text">
-                                            <?php echo $errors['music_file']; ?>
-                                        </section>
+                                        <section class="error-text"><?php echo $errors['music_file']; ?></section>
                                     <?php } ?>
 
                                 </section>
@@ -341,13 +323,11 @@ if (isset($_POST['submit'])) {
 
                                     <label class="form-label">Description</label>
                                     <textarea name="description" rows="4" class="form-control">
-                                <?php echo isset($description) ? htmlspecialchars($description) : ''; ?>
-                            </textarea>
+                                        <?php echo isset($description) ? htmlspecialchars($description) : ''; ?>
+                                    </textarea>
 
                                     <?php if (isset($errors['description'])) { ?>
-                                        <section class="error-text">
-                                            <?php echo $errors['description']; ?>
-                                        </section>
+                                        <section class="error-text"><?php echo $errors['description']; ?></section>
                                     <?php } ?>
 
                                 </section>
@@ -364,9 +344,9 @@ if (isset($_POST['submit'])) {
 
             </section>
 
-        </div>
+        </section>
 
-    </div>
+    </section>
 
 </body>
 
